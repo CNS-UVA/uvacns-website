@@ -1,17 +1,6 @@
-<!-- YOU CAN DELETE EVERYTHING IN THIS PAGE -->
 
-<script>
-    import Typewriter from 'svelte-typewriter'
-</script>
-
-<Typewriter mode="loopRandom" interval="130" >
-    <div class="p-48">
-        <h1 class="flex justify-center items-center">Welcome to the cyber range. </h1>
-    </div>
-</Typewriter>
-
-<div class="container mx-auto flex justify-center items-center">
-    <div class="space-y-0 flex justify-evenly gap-10">
+<div class="space-y-10 container mx-auto flex justify-center items-center">
+    <div class="flex justify-evenly gap-10">
         <div class="space-y-5"> 
 		    <h1>Who are we?</h1>
 		    <p>We are a group of UVA students interested in software, network, hardware, and application security. We engage in security competitions as a club, host interesting speakers, develop security tools and challenges, and leverage industry connections.</p>
@@ -24,5 +13,4 @@
             </p>
         </div>
     </div>
-
 </div>
