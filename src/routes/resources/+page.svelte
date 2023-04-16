@@ -1,16 +1,36 @@
 
-<div class="space-y-10 container mx-auto flex justify-center items-center">
-    <div class="flex justify-evenly gap-10">
-        <div class="space-y-5"> 
-		    <h1>Who are we?</h1>
-		    <p>We are a group of UVA students interested in software, network, hardware, and application security. We engage in security competitions as a club, host interesting speakers, develop security tools and challenges, and leverage industry connections.</p>
-        </div>
-
-        <div class="space-y-5">
-            <h1>What happens here?</h1>
-            <p>
-                CNS hosts a wide range of events throughout the semester. Our biggest event is <b><a href="https://cyberstorm.uvacns.com">CyberStorm</a></b>, a day-long, realistic cybersecurity competition that teaches you the skills to defend against cyber attacks in a red/blue team scenario. We host weekly meetings to cover basics in networking and security, participate in Capture The Flags together, and break a lot of things! To learn more about CNS@UVA, please check out our <b><a href="">Discord</a></b> for more information!
-            </p>
-        </div>
+<div class="p-24 container mx-auto flex-column [&>*]:px-8">
+    <h1 class="pt-8"> Interested in learning more about cybersecurity? </h1>
+    <p class="pt-4"> Here are some resources that you may find useful! </p>
+    <div class="p-4 [&>*]:py-1">
+        <h2> CyberStorm </h2>
+        <ul>
+            <li> <b>Website:</b> <a href="https://cyberstorm.uvacns.com/"> https://cyberstorm.uvacns.com/ </a> </li>
+            <li> <b>Contact:</b> <a href="mailto:cah3ks@virginia.edu"> cah3ks@virginia.edu </a> </li>
+            <li> <b>Description:</b> </li>
+        </ul>
+    </div>
+    <div class="p-4 [&>*]:py-1">
+        <h2> MetaCTF </h2>
+        <ul>
+            <li> <b>Website:</b> <a href="https://metactf.com/"> https://metactf.com/ </a> </li>
+            <li> <b>Contact:</b> <a href="mailto:contact@metactf.com"> contact@metactf.com </a> </li>
+            <li> <b>Description:</b> </li>
+        </ul>
+    </div>
+    <div class="p-4 [&>*]:py-1">
+        <h2> Hack The Box </h2>
+        <ul>
+            <li> <b>Website:</b> <a href="https://www.hackthebox.com/"> https://www.hackthebox.com/ </a> </li>
+            <li> <b>Description:</b> </li>
+        </ul>
+    </div>
+    <div class="p-4 [&>*]:py-1">
+        <h2> Collegiate Cyber Defense Competition</h2>
+        <ul>
+            <li> <b>Nationals Website:</b> <a href="https://www.nationalccdc.org/"> https://www.nationalccdc.org/ </a> </li>
+            <li> <b>Regionals Website:</b> <a href="https://maccdc.org/"> https://maccdc.org/ </a> </li>
+            <li> <b>Description:</b> </li>
+        </ul>
     </div>
 </div>
