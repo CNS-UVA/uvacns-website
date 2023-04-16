@@ -32,11 +32,27 @@
 				</a>
 				<a
 					class="btn variant-ghost-surface"
+					href="/events"
+					target="_blank"
+					rel="noreferrer"
+				>
+				    Events
+				</a>
+				<a
+					class="btn variant-ghost-surface"
 					href="/resources"
 					target="_blank"
 					rel="noreferrer"
 				>
 				    Resources
+				</a>
+				<a
+					class="btn variant-ghost-surface"
+					href="/officers"
+					target="_blank"
+					rel="noreferrer"
+				>
+				    Officers
 				</a>
 				<a
 					class="btn variant-ghost-surface"
