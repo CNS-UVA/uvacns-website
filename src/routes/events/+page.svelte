@@ -1,7 +1,7 @@
 
 <div class="p-24 container mx-auto flex-column [&>*]:px-8">
 
-    <h1 class="p-8"> Here are some of the things that go on around here. </h1>
+    <h1 class="p-8"> What's happening this semester? </h1>
 
     <div class="p-4 [&>*]:py-1">
         <h2> Weekly Meetings </h2>

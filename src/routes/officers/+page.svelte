@@ -1,22 +1,25 @@
 <script>
     import { Avatar } from '@skeletonlabs/skeleton';
+
+    let chris = 'officers/23-24/chris_marotta.jpg';
+    let chase = 'officers/23-24/chase.png';
 </script>
 
 <h1 class="p-16 flex justify-center items-center"> 2023-2024 Executive Board </h1>
 <div class="">
-    <div class="p-16 flex justify-evenly items-center [&>*]:text-center [&>*]:p-4 [&>*]:card">
+    <div class="p-16 flex justify-evenly items-center [&>*]:text-center [&>*]:p-4 [&>*]:card [&>*]:card-hover">
         <div>
             <Avatar initials="RI" width="w-64" background="bg-primary-500" rounded="rounded-full"/>
             <p class="pt-8"> <b> Riley Immel </b> </p>
             <p> <b> President </b> </p>
         </div>
        <div>
-            <Avatar initials="CH" width="w-64" background="bg-primary-500" rounded="rounded-full"/>
+           <Avatar initials="CH" width="w-64" src={chase} rounded="rounded-full"/>
             <p class="pt-8"> <b> Chase Hildebrand </b> </p>
             <p> <b> Vice President for Infrastructure </b> </p>
         </div>
         <div>
-            <Avatar initials="CM" width="w-64" background="bg-primary-500" rounded="rounded-full"/>
+            <Avatar initials="CM" width="w-64" src={chris} rounded="rounded-full"/>
             <p class="pt-8"> <b> Chris Marotta </b> </p>
             <p> <b> Vice President for Competitions </b> </p>
         </div>
@@ -26,7 +29,7 @@
             <p> <b> President </b> </p>
         </div-->
     </div>
-    <div class="p-16 flex justify-evenly items-center [&>*]:text-center [&>*]:p-4 [&>*]:card">
+    <div class="p-16 flex justify-evenly items-center [&>*]:text-center [&>*]:p-4 [&>*]:card [&>*]:card-hover">
         <div>
             <Avatar initials="EM" width="w-64" background="bg-primary-500" rounded="rounded-full"/>
             <p class="pt-8"> <b> Eric Miller </b> </p>

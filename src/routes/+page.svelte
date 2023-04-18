@@ -11,29 +11,38 @@
             'test',
         ]
     };
+
+    let discord = "images/discord.svg";
+    let mail = "images/envelope-regular.svg";
+    let calendar = "images/calendar-days-solid.svg";
 </script>
 
 <Typewriter mode="loopRandom" interval="130" >
-    <div class="p-48 px-48">
-        <h1 class="flex justify-center items-center">Welcome to the cyber range. </h1>
+    <div class="p-24 px-48">
+        <h1 class="flex justify-center items-center">Welcome to CNS. </h1>
     </div>
 </Typewriter>
 
-<!--div class="p-24 container flex justify-center items-center space-x-24">
-    <a
-        class="btn variant-ghost-surface"
-        >
-        Mailing List
-    </a>
-    <a
-        class="btn variant-ghost-surface"
-        >
-        Contact
-    </a>
-</div-->
+<div class="px-48 flex justify-center items-center space-x-8">
+    <div>
+        <a class = "btn variant-ghost-surface" href="https://lists.virginia.edu/sympa/subscribe/cnsuva">
+            Mailing List
+        </a>
+    </div>
+    <div>
+        <a class = "btn variant-ghost-surface" href="mailto:nnp3axx@virginia.edu">
+            Contact
+        </a>
+    </div>
+    <div>
+        <a class = "btn variant-ghost-surface" href="https://discord.com/invite/AeSy8wM3NV">
+            Discord
+        </a>
+    </div>
+</div>
 
 <div class="container mx-auto flex justify-center items-center">
-    <div class="space-y-0 flex justify-evenly gap-10 [&>*]:space-y-5">
+    <div class="pt-16 pb-36 flex justify-evenly gap-10 [&>*]:space-y-5">
         <div> 
 		    <h1>Who are we?</h1>
 		    <p>We are a group of UVA students interested in software, network, hardware, and application security. We engage in security competitions as a club, host interesting speakers, develop security tools and challenges, and leverage industry connections.</p>

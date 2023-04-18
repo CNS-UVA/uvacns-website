@@ -3,7 +3,7 @@
 </script>
 
 <div class="p-24 container mx-auto flex-column [&>*]:px-8">
-    <h1 class="p-8"> Here are some resources we're particularly excited about. </h1>
+    <h1 class="p-8"> Interested in learning more? </h1>
     <div class="p-4 [&>*]:py-1">
         <h2> MetaCTF </h2>
         <ul>
