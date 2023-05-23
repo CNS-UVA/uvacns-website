@@ -239,15 +239,6 @@
                                 </p>
                             </a>
                         </li>
-                        <li class="[&>*]:pt-4">
-                            <a href="http://www.securitytraps.pl/" class="no-underline">
-                                <b> Security Traps </b>
-
-                                <p> 
-                                    More advanced security challenges!
-                                </p>
-                            </a>
-                        </li>
                     </ul>
 
                 </svelte:fragment>
