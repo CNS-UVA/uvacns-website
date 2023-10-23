@@ -9,7 +9,7 @@
 <div class="">
     <div class="p-16 flex justify-evenly items-center [&>*]:text-center [&>*]:p-4 [&>*]:card [&>*]:card-hover">
         <div>
-            <Avatar initials="RI" width="w-64" background="bg-primary-500" rounded="rounded-full"/>
+            <Avatar initials="RI" width="w-64" src={riley} background="bg-primary-500" rounded="rounded-full"/>
             <p class="pt-8"> <b> Riley Immel </b> </p>
             <p> <b> President </b> </p>
         </div>
