@@ -1,8 +1,9 @@
-<script>
+<:script>
     import { Avatar } from '@skeletonlabs/skeleton';
 
     let chris = 'officers/23-24/chris_marotta.jpg';
     let chase = 'officers/23-24/chase.png';
+    let riley = 'officers/23-24/riley.jpg';
 </script>
 
 <h1 class="p-16 flex justify-center items-center"> 2023-2024 Executive Board </h1>
