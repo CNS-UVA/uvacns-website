@@ -1,9 +1,10 @@
 <script>
     import { Avatar } from '@skeletonlabs/skeleton';
 
-    let chris = 'officers/23-24/chris_marotta.jpg';
-    let chase = 'officers/23-24/chase.png';
     let riley = 'officers/23-24/riley.jpg';
+    let chase = 'officers/23-24/chase.jpg';
+    let chris = 'officers/23-24/chris_marotta.jpg';
+    let eric = 'officers/23-24/eric.jpg';
 </script>
 
 <h1 class="p-16 flex justify-center items-center"> 2023-2024 Executive Board </h1>
@@ -32,7 +33,7 @@
     </div>
     <div class="p-16 flex justify-evenly items-center [&>*]:text-center [&>*]:p-4 [&>*]:card [&>*]:card-hover">
         <div>
-            <Avatar initials="EM" width="w-64" background="bg-primary-500" rounded="rounded-full"/>
+            <Avatar initials="EM" width="w-64" src={eric} background="bg-primary-500" rounded="rounded-full"/>
             <p class="pt-8"> <b> Eric Miller </b> </p>
             <p> <b> Secretary </b> </p>
         </div>
