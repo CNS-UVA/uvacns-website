@@ -6,7 +6,7 @@
     <div class="p-4 [&>*]:py-1">
         <h2> Weekly Meetings </h2>
         <ul>
-            <li><b>When:</b> Wednesdays at 6:00PM EST</li>
+            <li><b>When:</b> Wednesdays at 7:00PM EST</li>
             <li><b>Location:</b> Olsson Hall</li>
             <li><b>Description:</b>
                     Each week, we have something new to show to all of our members at CNS. Ranging from mini capture-the-flag competitions, to talks about binary exploitation, our weekly meetings are a great way to dive deep into the realm of cybersecurity. We also leverage our connections to introduce speakers that have served in the security industry to give you the information you need to succeed.
