@@ -8,6 +8,7 @@
 	// Most of your app wide CSS should be put in this file
     import '../app.postcss';
     import { AppShell, AppBar } from '@skeletonlabs/skeleton';
+		import config from "../config";
 
 </script>
 
@@ -25,30 +26,9 @@
                 </a>
 			</svelte:fragment>
 			<svelte:fragment slot="trail">
-				<a
-					class="btn variant-ghost-surface"
-					href="/"
-				>
-					Home
-				</a>
-				<a
-					class="btn variant-ghost-surface"
-					href="/events"
-				>
-				    Events
-				</a>
-				<a
-					class="btn variant-ghost-surface"
-					href="/resources"
-				>
-				    Resources
-				</a>
-				<a
-					class="btn variant-ghost-surface"
-					href="/officers"
-				>
-				    Officers
-				</a>
+				{#each config.nav as link}
+					<a class="btn variant-ghost-surface" href={link.href}>{link.text}</a>
+				{/each}
 			</svelte:fragment>
 		</AppBar>
 	</svelte:fragment>
@@ -59,7 +39,9 @@
                 <p class="flex justify-center items-center text-sm pt-2"> © CNS@UVA </p>
         </AppBar>
     </svelte:fragment>
-	<slot />
+	<div class="container relative mx-auto py-12">
+		<slot />
+	</div>
 </AppShell>
 
 

@@ -3,6 +3,7 @@
     import Calendar from '@event-calendar/core';
     import TimeGrid from '@event-calendar/time-grid'
     import '@event-calendar/core/index.css';
+    import config from '../config';
 
     let plugins = [TimeGrid];
     let options = {
@@ -17,37 +18,26 @@
     let calendar = "images/calendar-days-solid.svg";
 </script>
 
-<Typewriter mode="loopRandom" interval="130" >
-    <div class="p-24 px-48">
-        <h1 class="flex justify-center items-center">Welcome to CNS. </h1>
+<Typewriter mode="loopRandom" interval={130} >
+    <div class="pt-12 pb-24">
+        <h1 class="flex justify-center items-center">Welcome to CNS.</h1>
     </div>
 </Typewriter>
 
-<div class="px-48 flex justify-center items-center space-x-8">
-    <div>
-        <a class = "btn variant-ghost-surface" href="https://lists.virginia.edu/sympa/subscribe/cnsuva">
-            Mailing List
-        </a>
-    </div>
-    <div>
-        <a class = "btn variant-ghost-surface" href="mailto:nnp3axx@virginia.edu">
-            Contact
-        </a>
-    </div>
-    <div>
-        <a class = "btn variant-ghost-surface" href="https://discord.com/invite/AeSy8wM3NV">
-            Discord
-        </a>
-    </div>
+<div class="flex justify-center items-center space-x-8">
+    {#each config.links as link}
+        <div>
+            <a class="btn variant-ghost-surface" href={link.href}>{link.text}</a>
+        </div>
+    {/each}
 </div>
 
-<div class="container mx-auto flex justify-center items-center">
+<div class="flex justify-center items-center">
     <div class="pt-16 pb-36 flex justify-evenly gap-10 [&>*]:space-y-5">
-        <div> 
+        <div>
 		    <h1>Who are we?</h1>
 		    <p>We are a group of UVA students interested in software, network, hardware, and application security. We engage in security competitions as a club, host interesting speakers, develop security tools and challenges, and leverage industry connections.</p>
         </div>
-
         <div>
             <h1>What happens here?</h1>
             <p>
@@ -55,13 +45,12 @@
             </p>
         </div>
     </div>
-
 </div>
 
-<!-- Logo on website
-<!-- Officers Page
-<!-- Events Page
-<!-- Calendar or link to Google Calendar
+<!-- Logo on website -->
+<!-- Officers Page -->
+<!-- Events Page -->
+<!-- Calendar or link to Google Calendar -->
 
 
 <!-- Docs Page (Later on) -->
