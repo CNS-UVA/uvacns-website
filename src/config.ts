@@ -13,7 +13,7 @@ const config = {
 				},
 				{
 					header: 'Description',
-					text: 'Each week, we have something new to show to all of our members at CNS. Ranging from mini capture-the-flag competitions, to talks about binary exploitation, our weekly meetings are a great way to dive deep into the realm of cybersecurity. We also leverage our connections to introduce speakers that have served in the security industry to give you the information you need to succeed.'
+					text: 'Each week, we have something new to show to all of our members at CNS. Ranging from mini capture-the-flag competitions to talks about binary exploitation, our weekly meetings are a great way to dive deep into the realm of cybersecurity. We also leverage our connections to introduce speakers that have served in the security industry to give you the information you need to succeed.'
 				}
 			]
 		},
@@ -63,7 +63,7 @@ const config = {
 		},
 		{
 			text: 'Contact',
-			href: 'mailto:nnp3axx@virginia.edu'
+			href: 'mailto:ypq8st@virginia.edu'
 		},
 		{
 			text: 'Discord',
@@ -294,7 +294,8 @@ const config = {
 				]
 			}
 		]
-	}
+	},
+	title: 'Computer and Network Security Club @ UVA'
 };
 
 export default config;

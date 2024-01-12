@@ -5,6 +5,13 @@
 	import '@event-calendar/core/index.css';
 	import config from '../config';
 
+	const cyberstormLink =
+		config.events
+			.filter((e) => e.header.toLowerCase().includes('cyberstorm'))[0]
+			.fields.filter((f) => f.header.toLowerCase().includes('website'))[0].href ?? '';
+	const discordLink =
+		config.links.filter((l) => l.text.toLowerCase().includes('discord'))[0].href ?? '';
+
 	let plugins = [TimeGrid];
 	let options = {
 		view: 'timeGridWeek',
@@ -44,12 +51,12 @@
 			<h1>What happens here?</h1>
 			<p>
 				CNS hosts a wide range of events throughout the semester. Our biggest event is <b
-					><a href="https://cyberstorm.uvacns.com">CyberStorm</a></b
+					><a href={cyberstormLink}>CyberStorm</a></b
 				>, a day-long, realistic cybersecurity competition that teaches you the skills to defend
 				against cyber attacks in a red/blue team scenario. We host weekly meetings to cover basics
 				in networking and security, participate in Capture The Flags together, and break a lot of
-				things! To learn more about CNS@UVA, please check out our <b><a href="">Discord</a></b> for more
-				information!
+				things! To learn more about CNS@UVA, please check out our
+				<b><a href={discordLink}>Discord</a></b> for more information!
 			</p>
 		</div>
 	</div>

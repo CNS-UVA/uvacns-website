@@ -9,7 +9,14 @@
 	import '../app.postcss';
 	import { AppShell, AppBar } from '@skeletonlabs/skeleton';
 	import config from '../config';
+	import { page } from '$app/stores';
+	const data = $page.data;
 </script>
+
+<svelte:head>
+	<title>{data.title ?? ''}{data.title ? ' - ' : ''}{config.title}</title>
+	<meta name="description" content="The website for the {config.title}" />
+</svelte:head>
 
 <AppShell>
 	<svelte:fragment slot="header">
@@ -17,7 +24,7 @@
 		<AppBar>
 			<svelte:fragment slot="lead">
 				<a href="/">
-					<strong class="text-xl uppercase"> Computer Network and Security Club @ UVA </strong>
+					<strong class="text-xl uppercase">{config.title}</strong>
 				</a>
 			</svelte:fragment>
 			<svelte:fragment slot="trail">
