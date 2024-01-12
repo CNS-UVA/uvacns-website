@@ -41,7 +41,6 @@
                                 </p>
                             </a>
                         </li>
-                    <ul>
                         <li class="[&>*]:pt-4">
                             <a href="https://github.com/WebGoat/WebGoat" class="no-underline">
                                 <b>WebGoat</b>
