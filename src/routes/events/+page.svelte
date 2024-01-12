@@ -1,5 +1,5 @@
 
-<div class="p-24 container mx-auto flex-column [&>*]:px-8">
+<div class="p-16 container mx-auto flex-column [&>*]:px-8">
 
     <h1 class="p-8"> What's happening this semester? </h1>
 
