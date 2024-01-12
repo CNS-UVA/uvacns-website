@@ -3,7 +3,7 @@
 </script>
 
 <div class="flex-column">
-	<h1 class="py-8">What's happening this semester?</h1>
+	<h1 class="pb-8 text-center">What's happening this semester?</h1>
 	{#each config.events as event}
 		<div class="py-4">
 			<h2 class="py-1">{event.header}</h2>

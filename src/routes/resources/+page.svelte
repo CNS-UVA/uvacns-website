@@ -4,7 +4,7 @@
 </script>
 
 <div class="flex-column">
-	<h1 class="py-8">Interested in learning more?</h1>
+	<h1 class="pb-8 text-center">Interested in learning more?</h1>
 
 	{#each config.resources.general as resource}
 		<div class="py-4">
@@ -20,7 +20,7 @@
 		</div>
 	{/each}
 
-	<h1 class="pt-16">Want to dive into a specific topic?</h1>
+	<h2 class="pt-8">Want to dive into a specific topic?</h2>
 	<p class="py-4">
 		Here are some websites that we found useful for learning a variety of security applications:
 	</p>

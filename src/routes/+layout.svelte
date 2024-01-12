@@ -41,7 +41,7 @@
 			<p class="flex justify-center items-center text-sm pt-2">© CNS@UVA</p>
 		</AppBar>
 	</svelte:fragment>
-	<div class="container relative mx-auto py-12">
+	<div class="container relative mx-auto py-16">
 		<slot />
 	</div>
 </AppShell>
