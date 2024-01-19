@@ -1,56 +1,22 @@
-<script>
-    import { Avatar } from '@skeletonlabs/skeleton';
+<script lang="ts">
+	import { Avatar } from '@skeletonlabs/skeleton';
+	import config from '../../config';
 
-    let riley = 'officers/23-24/riley.jpg';
-    let chase = 'officers/23-24/chase.jpg';
-    let chris = 'officers/23-24/chris_marotta.jpg';
-    let eric = 'officers/23-24/eric.jpg';
+	let officers = config.officers;
 </script>
 
-<h1 class="p-16 flex justify-center items-center"> 2023-2024 Executive Board </h1>
-<div class="">
-    <div class="p-16 flex justify-evenly items-center [&>*]:text-center [&>*]:p-4 [&>*]:card [&>*]:card-hover">
-        <div>
-            <Avatar initials="RI" width="w-64" src={riley} rounded="rounded-full"/>
-            <p class="pt-8"> <b> Riley Immel </b> </p>
-            <p> <b> President </b> </p>
-        </div>
-       <div>
-           <Avatar initials="CH" width="w-64" src={chase} rounded="rounded-full"/>
-            <p class="pt-8"> <b> Chase Hildebrand </b> </p>
-            <p> <b> Vice President for Infrastructure </b> </p>
-        </div>
-        <div>
-            <Avatar initials="CM" width="w-64" src={chris} rounded="rounded-full"/>
-            <p class="pt-8"> <b> Chris Marotta </b> </p>
-            <p> <b> Vice President for Competitions </b> </p>
-        </div>
-        <!--div >
-            <Avatar initials="LB" width="w-64" background="bg-primary-500" rounded="rounded-full"/>
-            <p> <b> Your Face </b> </p>
-            <p> <b> President </b> </p>
-        </div-->
-    </div>
-    <div class="p-16 flex justify-evenly items-center [&>*]:text-center [&>*]:p-4 [&>*]:card [&>*]:card-hover">
-        <div>
-            <Avatar initials="EM" width="w-64" src={eric} background="bg-primary-500" rounded="rounded-full"/>
-            <p class="pt-8"> <b> Eric Miller </b> </p>
-            <p> <b> Secretary </b> </p>
-        </div>
-        <div>
-            <Avatar initials="A" width="w-64" background="bg-primary-500" rounded="rounded-full"/>
-            <p class="pt-8"> <b> Abhinav </b> </p>
-            <p> <b> Meetings Chair </b> </p>
-        </div>
-        <div>
-            <Avatar initials="J" width="w-64" background="bg-primary-500" rounded="rounded-full"/>
-            <p class="pt-8"> <b> Joseph </b> </p>
-            <p> <b> Treasurer </b> </p>
-        </div>
-        <!--div>
-            <Avatar initials="LB" width="w-32" background="bg-primary-500" rounded="rounded-full"/>
-            <p> <b> Your Face </b> </p>
-            <p> <b> President </b> </p>
-        </div-->
-    </div>
+<h1 class="pb-8 text-center">2023-2024 Executive Board</h1>
+<div class="grid grid-cols-3 py-4 gap-y-8">
+	{#each officers as officer}
+		<div class="text-center p-4 card card-hover mx-auto">
+			<Avatar
+				initials="{officer.first_name[0]}{officer.last_name[0]}"
+				width="w-64"
+				src={officer.img}
+				rounded="rounded-full"
+			/>
+			<p class="pt-8"><b> {officer.first_name} {officer.last_name} </b></p>
+			<p><b> {officer.role} </b></p>
+		</div>
+	{/each}
 </div>
