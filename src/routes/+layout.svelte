@@ -18,26 +18,25 @@
 	<meta name="description" content="The website for the {config.title}" />
 </svelte:head>
 
-<AppShell>
+<AppShell slotPageContent="">
 	<svelte:fragment slot="header">
 		<!-- App Bar -->
-		<AppBar>
+		<AppBar background="dark:bg-slate-900" class="shadow-lg">
 			<svelte:fragment slot="lead">
-				<a href="/">
-					<strong class="text-xl uppercase">{config.title}</strong>
-				</a>
+				<h4 class="font-normal bg-gradient-to-t from-orange-600 to-orange-600 bg-clip-text text-transparent box-decoration-clone">{config.title}</h4>
 			</svelte:fragment>
 			<svelte:fragment slot="trail">
 				{#each config.nav as link}
-					<a class="btn variant-ghost-surface" href={link.href}>{link.text}</a>
+					<a class="btn bg-initial !text-slate-100" href={link.href}>{link.text}</a>
 				{/each}
 			</svelte:fragment>
 		</AppBar>
 	</svelte:fragment>
 	<!-- Page Route Content -->
 	<svelte:fragment slot="pageFooter">
-		<AppBar>
-			<p class="flex text-center items-center text-xs">
+		<AppBar background="dark:bg-slate-900" class="shadow-lg">
+			<p class="flex justify-center items-center text-sm">© CNS@UVA</p>
+			<p class="flex text-center items-center text-xs max-w-[80%] mx-auto">
 				Although this organization has members who are University of Virginia students and may have
 				University employees associated or engaged in its activities and affairs, the organization
 				is not a part or an agency of the University of Virginia. It is a separate and independent
@@ -45,7 +44,6 @@
 				University does not direct, supervise or control the organization and is not responsible for
 				the organization’s contracts, acts or omissions.
 			</p>
-			<p class="flex justify-center items-center text-sm pt-2">© CNS@UVA</p>
 		</AppBar>
 	</svelte:fragment>
 	<div class="container relative mx-auto py-16">

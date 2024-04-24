@@ -1,4 +1,20 @@
 /*place global styles here */
+
+
+/* NOTE: set your target theme name (ex: skeleton, wintry, modern, etc) */
+
+:root [data-theme='wintry'] {
+    /* --theme-font-family-base: "Roboto", sans-serif; */
+    /* --theme-font-family-heading: "Roboto", sans-serif; */
+	/* --theme-font-color-base: red; */
+	/* --theme-font-color-dark	Set the default text color for dark mode.
+	--theme-rounded-base	Set the border radius for small elements, such as buttons, inputs, etc.
+	--theme-rounded-container	Set the border radius for large elements, such as cards, textfields, etc.
+	--theme-border-base	Set the default border size for elements, including inputs.
+	--on-[color]	Set an accessible overlapping text or fill color per each theme color.
+	--color-[color]-[shade]	Defines each color and shade value for your theme. */
+}
+		
 html,
 body {
 	@apply h-full;
@@ -6,4 +22,9 @@ body {
 
 a {
 	text-decoration: none !important;
+	@apply text-orange-500 !important;
+}
+
+b {
+	/* @apply text-red-500 !important; */
 }
