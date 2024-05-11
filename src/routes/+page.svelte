@@ -23,15 +23,13 @@
 	let calendar = 'images/calendar-days-solid.svg';
 </script>
 
-<div class="grid grid-cols-1 xl:grid-cols-2 gap-4 md:gap-10 items-center">
-	<div class="flex flex-col items-center xl:items-start text-center xl:text-left space-y-4 pt-6 pb-24 gap-4">
+<div class="flex flex-col items-center min-[1580px]:items-start min-[1580px]:text-left text-centerspace-y-0 pt-6 pb-16 gap-4 rounded-lg">
+	<div class="flex flex-col items-center xl:items-start text-center xl:text-left space-y-4 gap-4">
 		<Typewriter mode="loopRandom" interval={100}>
-			<div class=""> 
-				<p class="text-7xl font-bold text tracking-wideset">Welcome to CNS.</p>
-			</div>
+			<p class="text-6xl font-bold text tracking-wideset">Welcome to CNS.</p>
 		</Typewriter>
 		<p class="!text-xl max-w-[475px]"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur aut nihil iusto similique atque.</p>
-		<div class="flex justify-center items-center space-x-8">
+		<div class="flex justify-left items-center space-x-3 ">
 			{#each config.links as link}
 				<div>
 					<a class="btn variant-filled !text-slate-900" href={link.href}>{link.text}</a>
@@ -41,7 +39,8 @@
 	</div>
 	<!-- <div class=" absolute z-[1] top-[16%] left-[90%] aspect-video "> -->
 		<!-- <figure class="avatar flex aspect-square text-surface-50 font-semibold justify-center items-center overflow-hidden isolate bg-surface-400-500-token w-32  rounded-full shadow-xl"> -->
-		<img class="fixed top-[-25%] right-[-10%] z-[-1] opacity-30 animate-spin-slow object-cover rounded-full w-[80%]" src="favicon_upscaled_trans.png" alt="CNS logo">
+		<!-- <img class="fixed top-[-25%] right-[-10%] z-[-1] opacity-30 animate-spin-slow object-cover w-[80%]" src="favicon_upscaled_trans.png" alt="CNS logo"> -->
+		<i class="fa fa-shield fixed right-[10%] top-[-10%] text-[80em] max-[1280px]:text-[25em] max-[1280px]:top-[0%] max-[1280px]:absolute animate-spin-slow object-cover opacity-20 z-[-1] text-orange-500 pointer-events-none" aria-hidden="true"></i>
 		<!-- </figure> -->
 	<!-- </div> -->
 </div>
@@ -55,7 +54,7 @@
 </div> -->
 
 <div class="flex-col justify-center items-center">
-	<div class="pb-16 flex flex-col justify-evenly gap-[4rem] [&>*]:space-y-5 max-w-screen-xl">
+	<div class="pb-16 flex flex-col justify-evenly gap-[4rem] [&>*]:space-y-5 max-w-screen-xl max-[1580px]:px-10">
 		<div>
 			<h2>Who are we?</h2>
 			<p>

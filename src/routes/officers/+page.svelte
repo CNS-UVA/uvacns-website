@@ -6,7 +6,7 @@
 </script>
 
 <h1 class="pb-8 text-center">2023-2024 Executive Board</h1>
-<div class="grid grid-cols-3 py-4 gap-y-8">
+<div class="grid grid-cols-3 max-[1280px]:grid-cols-1 py-4 gap-y-8">
 	{#each officers as officer}
 		<div class="text-center p-4 card card-hover mx-auto !bg-slate-900 rounded-xl">
 			<Avatar
