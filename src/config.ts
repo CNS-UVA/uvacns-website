@@ -26,11 +26,6 @@ const config = {
 					href: 'https://cyberstorm.uvacns.com'
 				},
 				{
-					header: 'Contact',
-					text: 'cah3ks@virginia.edu',
-					href: 'mailto:cah3ks@virginia.edu'
-				},
-				{
 					header: 'Description',
 					text: 'CyberStorm is a red versus blue team competition that simulates real-world cyber attacks in a controlled environment. Participants (blue teams) are responsible for maintaining business operations while warding off an active cyber threat, simulated by the red team. Hosted by CNS@UVA every semester, it is the biggest university event that tests your abilities to defend against cyber-attack scenarios and keep you on your feet.'
 				}
@@ -63,7 +58,7 @@ const config = {
 		},
 		{
 			text: 'Contact',
-			href: 'mailto:ypq8st@virginia.edu'
+			href: 'mailto:cnsuva-officers@virginia.edu'
 		},
 		{
 			text: 'Discord',
@@ -90,40 +85,52 @@ const config = {
 	],
 	officers: [
 		{
-			first_name: 'Riley',
-			last_name: 'Immel',
+			first_name: 'Shreyas',
+			last_name: 'Mayya',
 			role: 'President',
-			img: 'officers/23-24/riley.jpg'
+			img: 'officers/25-26/shreyas.jpg'
 		},
 		{
-			first_name: 'Chase',
-			last_name: 'Hildebrand',
+			first_name: 'Vincent',
+			last_name: 'Zhang',
 			role: 'Vice President for Infrastructure',
-			img: 'officers/23-24/chase.jpg'
+			img: 'officers/25-26/vincent.jpg'
 		},
 		{
-			first_name: 'Chris',
-			last_name: 'Marotta',
-			role: 'Vice President for Competitions',
-			img: 'officers/23-24/chris_marotta.jpg'
+			first_name: 'Iuri',
+			last_name: 'Vintonyak',
+			role: 'Vice President for Cyber Offense',
+			img: 'officers/25-26/iuri.jpg'
 		},
 		{
-			first_name: 'Eric',
-			last_name: 'Miller',
+			first_name: 'Benjamin',
+			last_name: 'Wolcott',
+			role: 'Vice President for Cyber Defense',
+			img: 'officers/25-26/ben.jpg'
+		},
+		{
+			first_name: 'Arjun',
+			last_name: 'Rao',
 			role: 'Secretary',
-			img: 'officers/23-24/eric.jpg'
+			img: 'officers/25-26/arjun.jpg'
 		},
 		{
-			first_name: 'Abhinav',
-			last_name: 'Mara',
-			role: 'Meetings Chair',
-			img: undefined
-		},
-		{
-			first_name: 'Joseph',
-			last_name: 'Beauchamp',
+			first_name: 'Nikhil',
+			last_name: 'Boyalla',
 			role: 'Treasurer',
-			img: undefined
+			img: 'officers/25-26/nikhil.jpg'
+		},
+		{
+			first_name: 'Austin',
+			last_name: 'Song',
+			role: 'Publicist',
+			img: 'officers/25-26/austin_s.jpg'
+		},
+		{
+			first_name: 'Austin',
+			last_name: 'Trinh',
+			role: 'Meetings Chair',
+			img: 'officers/25-26/austin_t.jpg'
 		}
 	],
 	resources: {
@@ -295,7 +302,7 @@ const config = {
 			}
 		]
 	},
-	title: 'Computer and Network Security Club @ UVA'
+	title: 'Computer and Network Security @ UVA'
 };
 
 export default config;
