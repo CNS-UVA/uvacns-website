@@ -23,24 +23,40 @@
 	let calendar = 'images/calendar-days-solid.svg';
 </script>
 
-<Typewriter mode="loopRandom" interval={130}>
-	<div class="pt-12 pb-24">
-		<h1 class="flex justify-center items-center">Welcome to CNS.</h1>
+<div class="flex flex-col items-center min-[1580px]:items-start min-[1580px]:text-left text-centerspace-y-0 pt-6 pb-16 gap-4 rounded-lg">
+	<div class="flex flex-col items-center xl:items-start text-center xl:text-left space-y-4 gap-4">
+		<Typewriter mode="loopRandom" interval={100}>
+			<p class="text-6xl font-bold text tracking-wideset">Welcome to CNS.</p>
+		</Typewriter>
+		<p class="!text-xl max-w-[475px]"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur aut nihil iusto similique atque.</p>
+		<div class="flex justify-left items-center space-x-3 ">
+			{#each config.links as link}
+				<div>
+					<a class="btn variant-filled !text-slate-900" href={link.href}>{link.text}</a>
+				</div>
+			{/each}
+		</div>	
 	</div>
-</Typewriter>
+	<!-- <div class=" absolute z-[1] top-[16%] left-[90%] aspect-video "> -->
+		<!-- <figure class="avatar flex aspect-square text-surface-50 font-semibold justify-center items-center overflow-hidden isolate bg-surface-400-500-token w-32  rounded-full shadow-xl"> -->
+		<!-- <img class="fixed top-[-25%] right-[-10%] z-[-1] opacity-30 animate-spin-slow object-cover w-[80%]" src="favicon_upscaled_trans.png" alt="CNS logo"> -->
+		<i class="fa fa-shield fixed right-[10%] top-[-10%] text-[80em] max-[1280px]:text-[25em] max-[1280px]:top-[0%] max-[1280px]:absolute animate-spin-slow object-cover opacity-20 z-[-1] text-orange-500 pointer-events-none" aria-hidden="true"></i>
+		<!-- </figure> -->
+	<!-- </div> -->
+</div>
 
-<div class="flex justify-center items-center space-x-8">
+<!-- <div class="flex justify-center items-center space-x-8">
 	{#each config.links as link}
 		<div>
 			<a class="btn variant-ghost-surface" href={link.href}>{link.text}</a>
 		</div>
 	{/each}
-</div>
+</div> -->
 
-<div class="flex justify-center items-center">
-	<div class="pt-16 pb-36 flex justify-evenly gap-10 [&>*]:space-y-5">
+<div class="flex-col justify-center items-center">
+	<div class="pb-16 flex flex-col justify-evenly gap-[4rem] [&>*]:space-y-5 max-w-screen-xl max-[1580px]:px-10">
 		<div>
-			<h1>Who are we?</h1>
+			<h2>Who are we?</h2>
 			<p>
 				We are a group of UVA students interested in software, network, hardware, and application
 				security. We engage in security competitions as a club, host interesting speakers, develop
@@ -48,15 +64,15 @@
 			</p>
 		</div>
 		<div>
-			<h1>What happens here?</h1>
+			<h2>What happens here?</h2>
 			<p>
 				CNS hosts a wide range of events throughout the semester. Our biggest event is <b
-					><a href={cyberstormLink}>CyberStorm</a></b
+				><a class="text-red-500" href={cyberstormLink}>CyberStorm</a></b
 				>, a day-long, realistic cybersecurity competition that teaches you the skills to defend
 				against cyber attacks in a red/blue team scenario. We host weekly meetings to cover basics
 				in networking and security, participate in Capture The Flags together, and break a lot of
 				things! To learn more about CNS@UVA, please check out our
-				<b><a href={discordLink}>Discord</a></b> for more information!
+				<b><a class="text-red-500" href={discordLink}>Discord</a></b> for more information!
 			</p>
 		</div>
 	</div>
