@@ -93,19 +93,19 @@ const config = {
 		{
 			first_name: 'Vincent',
 			last_name: 'Zhang',
-			role: 'Vice President for Infrastructure',
+			role: 'Infrastructure Chair',
 			img: 'officers/25-26/vincent.jpg'
 		},
 		{
 			first_name: 'Iuri',
 			last_name: 'Vintonyak',
-			role: 'Vice President for Cyber Offense',
+			role: 'Cyber Offense Chair',
 			img: 'officers/25-26/iuri.jpg'
 		},
 		{
 			first_name: 'Benjamin',
 			last_name: 'Wolcott',
-			role: 'Vice President for Cyber Defense',
+			role: 'Cyber Defense Chair',
 			img: 'officers/25-26/ben.jpg'
 		},
 		{
@@ -124,13 +124,13 @@ const config = {
 			first_name: 'Austin',
 			last_name: 'Song',
 			role: 'Publicist',
-			img: 'officers/25-26/austin_s.jpg'
+			img: 'officers/25-26/austin-song.jpg'
 		},
 		{
 			first_name: 'Austin',
 			last_name: 'Trinh',
 			role: 'Meetings Chair',
-			img: 'officers/25-26/austin_t.jpg'
+			img: 'officers/25-26/austin-trinh.jpg'
 		}
 	],
 	resources: {
@@ -302,7 +302,7 @@ const config = {
 			}
 		]
 	},
-	title: 'Computer and Network Security @ UVA'
+	title: 'Computer and Network Security Club @ UVA'
 };
 
 export default config;
