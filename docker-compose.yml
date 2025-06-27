@@ -2,4 +2,17 @@ services:
   web:
     build: .
     ports:
-     - "8001:3000"
+      - '8001:3000'
+    env_file:
+      - .env
+  db:
+    image: postgres
+    restart: always
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: cns
+      POSTGRES_PASSWORD: chiapet1
+      POSTGRES_DB: cns
+    volumes:
+      - ./db:/var/lib/postgresql/data

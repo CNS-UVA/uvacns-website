@@ -1,71 +1,67 @@
-<script>
-    import Typewriter from 'svelte-typewriter';
-    import Calendar from '@event-calendar/core';
-    import TimeGrid from '@event-calendar/time-grid'
-    import '@event-calendar/core/index.css';
-
-    let plugins = [TimeGrid];
-    let options = {
-        view: 'timeGridWeek',
-        events: [
-            'test',
-        ]
-    };
-
-    let discord = "images/discord.svg";
-    let mail = "images/envelope-regular.svg";
-    let calendar = "images/calendar-days-solid.svg";
+<script lang="ts">
+	import Button from '$lib/components/ui/button/button.svelte';
+	import * as Carousel from '$lib/components/ui/carousel/index';
+	import Mail from '@lucide/svelte/icons/mail';
+	import MessageSquare from '@lucide/svelte/icons/message-square';
+	import Send from '@lucide/svelte/icons/send';
 </script>
 
-<Typewriter mode="loopRandom" interval="130" >
-    <div class="p-24 px-48">
-        <h1 class="flex justify-center items-center">Welcome to CNS. </h1>
-    </div>
-</Typewriter>
-
-<div class="px-48 flex justify-center items-center space-x-8">
-    <div>
-        <a class = "btn variant-ghost-surface" href="https://lists.virginia.edu/sympa/subscribe/cnsuva">
-            Mailing List
-        </a>
-    </div>
-    <div>
-        <a class = "btn variant-ghost-surface" href="mailto:nnp3axx@virginia.edu">
-            Contact
-        </a>
-    </div>
-    <div>
-        <a class = "btn variant-ghost-surface" href="https://discord.com/invite/AeSy8wM3NV">
-            Discord
-        </a>
-    </div>
+<h1 class="typography">Computer and Network Security Club @ UVA</h1>
+<p class="text-muted-foreground text-center text-xl leading-7 [&:not(:first-child)]:mt-6">
+	The cybersecurity club at the University of Virginia.
+</p>
+<div class="mx-auto my-8 flex w-full flex-row justify-center gap-4">
+	<Button href="https://lists.virginia.edu/sympa/subscribe/cnsuva"
+		><Mail />Join our mailing list!</Button
+	>
+	<Button href="https://discord.com/invite/AeSy8wM3NV"><MessageSquare />Join our Discord!</Button>
+	<Button href="mailto:cnsuva-officers@virginia.edu"><Send />Contact us!</Button>
 </div>
-
-<div class="container mx-auto flex justify-center items-center">
-    <div class="pt-16 pb-36 flex justify-evenly gap-10 [&>*]:space-y-5">
-        <div> 
-		    <h1>Who are we?</h1>
-		    <p>We are a group of UVA students interested in software, network, hardware, and application security. We engage in security competitions as a club, host interesting speakers, develop security tools and challenges, and leverage industry connections.</p>
-        </div>
-
-        <div>
-            <h1>What happens here?</h1>
-            <p>
-                CNS hosts a wide range of events throughout the semester. Our biggest event is <b><a href="https://cyberstorm.uvacns.com">CyberStorm</a></b>, a day-long, realistic cybersecurity competition that teaches you the skills to defend against cyber attacks in a red/blue team scenario. We host weekly meetings to cover basics in networking and security, participate in Capture The Flags together, and break a lot of things! To learn more about CNS@UVA, please check out our <b><a href="">Discord</a></b> for more information!
-            </p>
-        </div>
-    </div>
-
+<div class="flex size-full grow place-content-center">
+	<Carousel.Root
+		class="m-auto w-3xl"
+		opts={{
+			loop: true
+		}}
+	>
+		<Carousel.Content>
+			<Carousel.Item>
+				<img
+					class="m-auto size-full object-contain"
+					src="/images/CCDCTeam2025.jpg"
+					alt="Our 2025 cyber defense team."
+				/>
+			</Carousel.Item>
+			<Carousel.Item>
+				<img
+					class="m-auto size-full object-contain"
+					src="/images/CCDCTeam2024.jpg"
+					alt="Our 2024 cyber defense team."
+				/>
+			</Carousel.Item>
+			<Carousel.Item>
+				<img
+					class="m-auto size-full object-contain"
+					src="/images/CCDCTeam2023.jpg"
+					alt="Our 2023 cyber defense team."
+				/>
+			</Carousel.Item>
+			<Carousel.Item>
+				<img
+					class="m-auto size-full object-contain"
+					src="/images/CCDCTeam2019.jpg"
+					alt="Our 2019 cyber defense team."
+				/>
+			</Carousel.Item>
+			<Carousel.Item>
+				<img
+					class="m-auto size-full object-contain"
+					src="/images/CCDCTeam2018.jpg"
+					alt="Our 2018 cyber defense team."
+				/>
+			</Carousel.Item>
+		</Carousel.Content>
+		<Carousel.Previous />
+		<Carousel.Next />
+	</Carousel.Root>
 </div>
-
-<!-- Logo on website
-<!-- Officers Page
-<!-- Events Page
-<!-- Calendar or link to Google Calendar
-
-
-<!-- Docs Page (Later on) -->
-<!-- automate announcements of discord onto website -->
-
-
-
