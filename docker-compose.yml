@@ -5,6 +5,9 @@ services:
       - '8001:3000'
     env_file:
       - .env
+    restart: unless-stopped
+    depends_on:
+      - db
   db:
     image: postgres
     restart: always
