@@ -9,5 +9,4 @@ RUN npm install
 COPY . ./
 RUN npm run build
 
-WORKDIR /app/build/
-CMD ["node", "index.js"]
+CMD ["node", "build"]

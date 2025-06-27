@@ -88,49 +88,57 @@ const config = {
 			first_name: 'Shreyas',
 			last_name: 'Mayya',
 			role: 'President',
-			img: 'officers/25-26/shreyas.jpg'
+			computing_id: 'eav6vg',
+			img: '/officers/25-26/shreyas.jpg'
 		},
 		{
 			first_name: 'Vincent',
 			last_name: 'Zhang',
 			role: 'Infrastructure Chair',
-			img: 'officers/25-26/vincent.jpg'
+			computing_id: 'usp4pg',
+			img: '/officers/25-26/vincent.jpg'
 		},
 		{
 			first_name: 'Iuri',
 			last_name: 'Vintonyak',
 			role: 'Cyber Offense Chair',
-			img: 'officers/25-26/iuri.jpg'
+			computing_id: 'eav6vg',
+			img: '/officers/25-26/iuri.jpg'
 		},
 		{
 			first_name: 'Benjamin',
 			last_name: 'Wolcott',
 			role: 'Cyber Defense Chair',
-			img: 'officers/25-26/ben.jpg'
+			computing_id: 'yhs3xc',
+			img: '/officers/25-26/ben.jpg'
 		},
 		{
 			first_name: 'Arjun',
 			last_name: 'Rao',
 			role: 'Secretary',
-			img: 'officers/25-26/arjun.jpg'
+			computing_id: 'rtt5gt',
+			img: '/officers/25-26/arjun.jpg'
 		},
 		{
 			first_name: 'Nikhil',
 			last_name: 'Boyalla',
 			role: 'Treasurer',
-			img: 'officers/25-26/nikhil.jpg'
+			computing_id: 'jvk8cr',
+			img: '/officers/25-26/nikhil.jpg'
 		},
 		{
 			first_name: 'Austin',
 			last_name: 'Song',
 			role: 'Publicist',
-			img: 'officers/25-26/austin-song.jpg'
+			computing_id: 'eav6vg',
+			img: '/officers/25-26/austin-song.jpg'
 		},
 		{
 			first_name: 'Austin',
 			last_name: 'Trinh',
 			role: 'Meetings Chair',
-			img: 'officers/25-26/austin-trinh.jpg'
+			computing_id: 'eav6vg',
+			img: '/officers/25-26/austin-trinh.jpg'
 		}
 	],
 	resources: {
