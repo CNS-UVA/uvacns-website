@@ -14,10 +14,15 @@
 <div class="typography">
 	<div>
 		<h2>Achievements</h2>
-		<p>The Cyber Offense Division fields teams at competitions ranging from capture-the-flags (CTFs) to red team and social engineering events. Accolades include:</p>
+		<p>
+			The Cyber Offense Division fields teams at competitions ranging from capture-the-flags (CTFs)
+			to red team and social engineering events. Accolades include:
+		</p>
 		<ul>
 			<li>Third place, 2025 Virginia Cyber Fusion competition</li>
-			<li>Second place in the undergraduate division, 2024 Temple Social Engineering Competition</li>
+			<li>
+				Second place in the undergraduate division, 2024 Temple Social Engineering Competition
+			</li>
 			<li>First place, 2019 Northeast Collegiate Penetration Testing Competition</li>
 		</ul>
 	</div>

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { page } from '$app/stores';
+	import { page } from '$app/state';
 	import * as NavigationMenu from '$lib/components/ui/navigation-menu/index';
 	import { navigationMenuTriggerStyle } from '$lib/components/ui/navigation-menu/navigation-menu-trigger.svelte';
 	import * as Avatar from '$lib/components/ui/avatar/index';
@@ -7,10 +7,10 @@
 	import { signIn, signOut } from '@auth/sveltekit/client';
 	import Shield from '@lucide/svelte/icons/shield';
 	import * as DropdownMenu from '$lib/components/ui/dropdown-menu/index';
-	import SunIcon from "@lucide/svelte/icons/sun";
-  	import MoonIcon from "@lucide/svelte/icons/moon";
-  	import { resetMode, setMode } from "mode-watcher";
-  	import { buttonVariants } from "$lib/components/ui/button/index";
+	import SunIcon from '@lucide/svelte/icons/sun';
+	import MoonIcon from '@lucide/svelte/icons/moon';
+	import { resetMode, setMode } from 'mode-watcher';
+	import { buttonVariants } from '$lib/components/ui/button/index';
 </script>
 
 <header class="bg-background sticky top-0 z-50 w-full border-b py-4">
@@ -87,49 +87,49 @@
 				</NavigationMenu.List>
 			</NavigationMenu.Root>
 		</div>
-		<div class="flex flex-row items-center gap-1 my-auto">
+		<div class="my-auto flex flex-row items-center gap-1">
 			<DropdownMenu.Root>
-			<DropdownMenu.Trigger
-				class={buttonVariants({ variant: "ghost", size: "icon" })}
-			>
-				<SunIcon
-				class="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 !transition-all dark:-rotate-90 dark:scale-0"
-				/>
-				<MoonIcon
-				class="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 !transition-all dark:rotate-0 dark:scale-100"
-				/>
-				<span class="sr-only">Toggle theme</span>
-			</DropdownMenu.Trigger>
-			<DropdownMenu.Content align="end">
-				<DropdownMenu.Item onclick={() => setMode("light")}>Light</DropdownMenu.Item
-				>
-				<DropdownMenu.Item onclick={() => setMode("dark")}>Dark</DropdownMenu.Item>
-				<DropdownMenu.Item onclick={() => resetMode()}>System</DropdownMenu.Item>
-			</DropdownMenu.Content>
+				<DropdownMenu.Trigger class={buttonVariants({ variant: 'ghost', size: 'icon' })}>
+					<SunIcon
+						class="h-[1.2rem] w-[1.2rem] scale-100 rotate-0 !transition-all dark:scale-0 dark:-rotate-90"
+					/>
+					<MoonIcon
+						class="absolute h-[1.2rem] w-[1.2rem] scale-0 rotate-90 !transition-all dark:scale-100 dark:rotate-0"
+					/>
+					<span class="sr-only">Toggle theme</span>
+				</DropdownMenu.Trigger>
+				<DropdownMenu.Content align="end">
+					<DropdownMenu.Item onclick={() => setMode('light')}>Light</DropdownMenu.Item>
+					<DropdownMenu.Item onclick={() => setMode('dark')}>Dark</DropdownMenu.Item>
+					<DropdownMenu.Item onclick={() => resetMode()}>System</DropdownMenu.Item>
+				</DropdownMenu.Content>
 			</DropdownMenu.Root>
-			<!-- {#if $page.data.session?.user}
+			{#if page.data.session?.user}
 				<DropdownMenu.Root>
 					<DropdownMenu.Trigger>
 						<Button variant="ghost">
 							<Avatar.Root>
 								<Avatar.Fallback>
-									{$page.data.session?.user?.name?.at(0)}
+									{page.data.session?.user?.name?.at(0)}
 								</Avatar.Fallback>
 							</Avatar.Root>
 						</Button>
 					</DropdownMenu.Trigger>
 					<DropdownMenu.Content align="end">
 						<DropdownMenu.Group>
-							<DropdownMenu.Label>{$page.data.session?.user?.name}</DropdownMenu.Label>
+							<DropdownMenu.Label>{page.data.session?.user?.name}</DropdownMenu.Label>
 							<DropdownMenu.Separator />
 							<DropdownMenu.Item>Profile</DropdownMenu.Item>
+							{#if page.data.session?.user?.admin}
+								<DropdownMenu.Item>Admin</DropdownMenu.Item>
+							{/if}
 							<DropdownMenu.Item onclick={signOut}>Sign Out</DropdownMenu.Item>
 						</DropdownMenu.Group>
 					</DropdownMenu.Content>
 				</DropdownMenu.Root>
 			{:else}
 				<Button variant="ghost" onclick={() => signIn('keycloak')}>Sign In</Button>
-			{/if} -->
+			{/if}
 		</div>
 	</div>
 </header>

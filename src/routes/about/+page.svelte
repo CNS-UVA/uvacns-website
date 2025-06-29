@@ -1,7 +1,7 @@
 <script lang="ts">
 	import Button from '$lib/components/ui/button/button.svelte';
 	import * as Card from '$lib/components/ui/card/index';
-    import BookOpen from '@lucide/svelte/icons/book-open';
+	import BookOpen from '@lucide/svelte/icons/book-open';
 	import Mail from '@lucide/svelte/icons/mail';
 	import User from '@lucide/svelte/icons/user';
 	import config from '../../config';
@@ -36,57 +36,54 @@
 	</div>
 </div>
 <div>
-    <h2 class="typography">Divisions</h2>
-    <p class="typography">CNS consists of three divisions.</p>
-    <div class="mx-auto mt-8 flex w-full flex-wrap justify-center gap-8">
-        <Card.Root class="basis-sm">
-            <Card.Header>
-                <Card.Title>
-                    Cyber Defense Division
-                </Card.Title>
-            </Card.Header>
-            <Card.Content class="grow">
-                The Cyber Defense Division protects computers, networks, and applications from cyber attacks through hardening and incident response.
-            </Card.Content>
-            <Card.Footer>
-                <Button class="w-full" href="/divisions/defense">
-                    <BookOpen />
-                    Learn More
-                </Button>
-            </Card.Footer>
-        </Card.Root>
-        <Card.Root class="basis-sm">
-            <Card.Header>
-                <Card.Title>
-                    Cyber Offense Division
-                </Card.Title>
-            </Card.Header>
-            <Card.Content class="grow">
-                The Cyber Offense Division identifies and exploits vulnerabilities in computers and networks for fun and profit.
-            </Card.Content>
-            <Card.Footer>
-                <Button class="w-full" href="/divisions/offense">
-                    <BookOpen />
-                    Learn More
-                </Button>
-            </Card.Footer>
-        </Card.Root>
-        <Card.Root class="basis-sm">
-            <Card.Header>
-                <Card.Title>
-                    Infrastructure Division
-                </Card.Title>
-            </Card.Header>
-            <Card.Content class="grow">
-                The Infrastructure Division manages CNS's computing resources and develops technical solutions to enable the other parts of the club.
-            </Card.Content>
-            <Card.Footer>
-                <Button class="w-full" href="/divisions/infrastructure">
-                    <BookOpen />
-                    Learn More
-                </Button>
-            </Card.Footer>
-        </Card.Root>
+	<h2 class="typography">Divisions</h2>
+	<p class="typography">CNS consists of three divisions.</p>
+	<div class="mx-auto mt-8 flex w-full flex-wrap justify-center gap-8">
+		<Card.Root class="basis-sm">
+			<Card.Header>
+				<Card.Title>Cyber Defense Division</Card.Title>
+			</Card.Header>
+			<Card.Content class="grow">
+				The Cyber Defense Division protects computers, networks, and applications from cyber attacks
+				through hardening and incident response.
+			</Card.Content>
+			<Card.Footer>
+				<Button class="w-full" href="/divisions/defense">
+					<BookOpen />
+					Learn More
+				</Button>
+			</Card.Footer>
+		</Card.Root>
+		<Card.Root class="basis-sm">
+			<Card.Header>
+				<Card.Title>Cyber Offense Division</Card.Title>
+			</Card.Header>
+			<Card.Content class="grow">
+				The Cyber Offense Division identifies and exploits vulnerabilities in computers and networks
+				for fun and profit.
+			</Card.Content>
+			<Card.Footer>
+				<Button class="w-full" href="/divisions/offense">
+					<BookOpen />
+					Learn More
+				</Button>
+			</Card.Footer>
+		</Card.Root>
+		<Card.Root class="basis-sm">
+			<Card.Header>
+				<Card.Title>Infrastructure Division</Card.Title>
+			</Card.Header>
+			<Card.Content class="grow">
+				The Infrastructure Division manages CNS's computing resources and develops technical
+				solutions to enable the other parts of the club.
+			</Card.Content>
+			<Card.Footer>
+				<Button class="w-full" href="/divisions/infrastructure">
+					<BookOpen />
+					Learn More
+				</Button>
+			</Card.Footer>
+		</Card.Root>
 	</div>
 </div>
 <div>

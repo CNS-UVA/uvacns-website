@@ -30,7 +30,8 @@
 			which was held virtually from April 25-27, 2025.
 		</p>
 		<p>
-			In addition to CCDC, the Cyber Defense Division sends teams to various blue-team competitions around the country.
+			In addition to CCDC, the Cyber Defense Division sends teams to various blue-team competitions
+			around the country.
 		</p>
 	</div>
 	<div>
