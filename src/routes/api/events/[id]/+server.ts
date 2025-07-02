@@ -27,9 +27,12 @@ export async function POST({ request, params, locals }) {
 		return error(400);
 	}
 	const { name, start, end, location, description } = await request.json();
+	if (new Date(start) > new Date(end)) {
+		return error(400);
+	}
 	await db
 		.update(events)
-		.set({ name, start, end, location, description })
+		.set({ name, start: new Date(start), end: new Date(end), location, description })
 		.where(eq(events.id, num));
 	return new Response(undefined, { status: 204 });
 }

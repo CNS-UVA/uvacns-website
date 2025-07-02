@@ -16,6 +16,9 @@ export async function POST({ request, locals }) {
 		return error(403);
 	}
 	const { name, start, end, location, description } = await request.json();
+	if (new Date(start) > new Date(end)) {
+		return error(400);
+	}
 	const output = await db
 		.insert(events)
 		.values({ name, start: new Date(start), end: new Date(end), location, description })

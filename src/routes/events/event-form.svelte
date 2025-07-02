@@ -5,12 +5,41 @@
 	import { Input } from '$lib/components/ui/input';
 	import { Textarea } from '$lib/components/ui/textarea';
 	import DateTimePicker from '$lib/components/ui/date-time-picker/date-time-picker.svelte';
-	import { now, getLocalTimeZone, type DateValue } from '@internationalized/date';
+	import {
+		now,
+		getLocalTimeZone,
+		type DateValue,
+		CalendarDateTime
+	} from '@internationalized/date';
 	import { cn } from '$lib/utils';
 	let { event = undefined } = $props();
 	let name = $state<string>(event?.name || '');
-	let startDate = $state<DateValue>(now(getLocalTimeZone()));
-	let endDate = $state<DateValue>(now(getLocalTimeZone()));
+	let startDate = $state<DateValue>(
+		event
+			? new CalendarDateTime(
+					event.start.getFullYear(),
+					event.start.getMonth() + 1,
+					event.start.getDate(),
+					event.start.getHours(),
+					event.start.getMinutes(),
+					event.start.getSeconds(),
+					0
+				)
+			: now(getLocalTimeZone())
+	);
+	let endDate = $state<DateValue>(
+		event
+			? new CalendarDateTime(
+					event.end.getFullYear(),
+					event.end.getMonth() + 1,
+					event.end.getDate(),
+					event.end.getHours(),
+					event.end.getMinutes(),
+					event.end.getSeconds(),
+					0
+				)
+			: now(getLocalTimeZone())
+	);
 	let location = $state<string>(event?.location || '');
 	let description = $state<string>(event?.description || '');
 
@@ -21,7 +50,6 @@
 	let open = $state(false);
 
 	async function createOrUpdateEvent() {
-		console.log(startDate, endDate);
 		startDate.set({ millisecond: 0 });
 		endDate.set({ millisecond: 0 });
 		let start = startDate.toDate(getLocalTimeZone()).toISOString();
