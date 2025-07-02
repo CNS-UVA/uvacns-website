@@ -31,7 +31,7 @@ export async function POST({ request, params, locals }) {
 		.update(events)
 		.set({ name, start, end, location, description })
 		.where(eq(events.id, num));
-	return json(null, { status: 204 });
+	return new Response(undefined, { status: 204 });
 }
 
 export async function DELETE({ params, locals }) {
@@ -46,5 +46,5 @@ export async function DELETE({ params, locals }) {
 		return error(400);
 	}
 	await db.delete(events).where(eq(events.id, num));
-	return json(null, { status: 204 });
+	return new Response(undefined, { status: 204 });
 }

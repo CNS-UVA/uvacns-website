@@ -9,12 +9,12 @@ export async function GET() {
 }
 
 export async function POST({ request, locals }) {
-	// const session = await locals.auth();
-	// if (!session?.user) {
-	// 	return error(401);
-	// } else if (!session?.user?.admin) {
-	// 	return error(403);
-	// }
+	const session = await locals.auth();
+	if (!session?.user) {
+		return error(401);
+	} else if (!session?.user?.admin) {
+		return error(403);
+	}
 	const { name, start, end, location, description } = await request.json();
 	const output = await db
 		.insert(events)
@@ -31,5 +31,5 @@ export async function DELETE({ locals }) {
 		return error(403);
 	}
 	await db.delete(events);
-	return json(null, { status: 204 });
+	return new Response(undefined, { status: 204 });
 }

@@ -2,10 +2,12 @@
 	import type { PageProps } from './$types';
 	import config from '../../config';
 	import { ScrollArea } from '$lib/components/ui/scroll-area/index';
-	import * as Card from '$lib/components/ui/card/index';
 	import { page } from '$app/state';
 	import { Separator } from '$lib/components/ui/separator';
 	import Button from '$lib/components/ui/button/button.svelte';
+	import EventForm from './event-form.svelte';
+	import IcsPopover from './ics-popover.svelte';
+	import DeleteDialog from './delete-dialog.svelte';
 	let { data }: PageProps = $props();
 </script>
 
@@ -18,7 +20,15 @@
 	Check out what's coming up at CNS!
 </p>
 
-<ScrollArea class="mt-8 max-h-fit w-full rounded-md border">
+
+<div class="mt-8 flex flex-row-reverse gap-4">
+	{#if page.data.session?.user?.admin}
+	<EventForm />
+	{/if}
+	<IcsPopover />
+</div>
+
+<ScrollArea class="mt-4 max-h-fit w-full rounded-md border">
 	<div class="p-8">
 		{#if data.upcoming.length === 0}
 			<p class="text-muted-foreground text-center">
@@ -37,8 +47,8 @@
 			<p class="mt-2">{evt.description}</p>
 			{#if page.data.session?.user?.admin}
 				<div class="mt-4 flex flex-row gap-4">
-					<Button variant="secondary">Edit</Button>
-					<Button variant="destructive">Delete</Button>
+					<EventForm event={evt} />
+					<DeleteDialog event={evt} />
 				</div>
 			{/if}
 			{#if i < data.upcoming.length - 1}
