@@ -57,7 +57,49 @@ const config = {
 			img: '/officers/25-26/austin-trinh.jpg'
 		}
 	],
-	title: 'Computer and Network Security Club @ UVA'
+	title: 'Computer and Network Security Club @ UVA',
+	locations: [
+		{
+			prefix: 'Rice',
+			latitude: 38.0316,
+			longitude: -78.5108
+		},
+		{
+			prefix: 'Olsson',
+			latitude: 38.0320,
+			longitude: -78.5105
+		},
+		{
+			prefix: 'Mech',
+			latitude: 38.0327,
+			longitude: -78.5111
+		},
+		{
+			prefix: 'Thornton A',
+			latitude: 38.0333,
+			longitude: -78.5010
+		},
+		{
+			prefix: 'Thornton B',
+			latitude: 38.0330,
+			longitude: -78.5102
+		},
+		{
+			prefix: 'Thornton C',
+			latitude: 38.0329,
+			longitude: -78.5095
+		},
+		{
+			prefix: 'Thornton D',
+			latitude: 38.0326,
+			longitude: -78.5104
+		},
+		{
+			prefix: 'Thornton E',
+			latitude: 38.0324,
+			longitude: -78.5098
+		}
+	]
 };
 
 export default config;

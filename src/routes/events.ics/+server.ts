@@ -2,6 +2,7 @@ import { db } from '$lib/server/db/index.js';
 import { events } from '$lib/server/db/schema.js';
 import { asc } from 'drizzle-orm';
 import { createEvents } from 'ics';
+import config from '../../config';
 
 export async function GET() {
 	const allEvents = await db.select().from(events).orderBy(asc(events.start));
@@ -23,9 +24,14 @@ export async function GET() {
 		] as [number, number, number, number, number],
 		title: event.name,
 		location: event.location,
-		description: event.description || ''
+		description: event.description ?? undefined,
+		geo: (() => {
+			const loc = config.locations.find((l) => event.location.startsWith(l.prefix));
+			return loc
+				? { lat: loc.latitude, lon: loc.longitude }
+				: undefined;
+		})()
 	}));
-
 	return new Promise((resolve) => {
 		createEvents(icsData, (_error, value) => {
 			resolve(new Response(value, { headers: { 'Content-Type': 'text/calendar' } }));

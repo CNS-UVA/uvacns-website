@@ -8,6 +8,8 @@
 	import EventForm from './event-form.svelte';
 	import IcsPopover from './ics-popover.svelte';
 	import DeleteDialog from './delete-dialog.svelte';
+	import LocationCard from './location-card.svelte';
+	import Map from '$lib/components/map.svelte';
 	let { data }: PageProps = $props();
 </script>
 
@@ -48,7 +50,14 @@
 					minute: 'numeric'
 				})}
 			</p>
-			<p class="text-muted-foreground mt-2"><strong>Where:</strong> {evt.location}</p>
+			<p class="text-muted-foreground mt-2">
+				<strong>Where:</strong>
+				{evt.location}
+				<!-- TODO: make this look better -->
+				<!-- {#if config.locations.find((l) => evt.location.startsWith(l.prefix))}
+					<LocationCard latitude={config.locations.find((l) => evt.location.startsWith(l.prefix))?.latitude} longitude={config.locations.find((l) => evt.location.startsWith(l.prefix))?.longitude} />
+				{/if} -->
+			</p>
 			<p class="mt-2">{evt.description}</p>
 			{#if page.data.session?.user?.admin}
 				<div class="mt-4 flex flex-row gap-4">
