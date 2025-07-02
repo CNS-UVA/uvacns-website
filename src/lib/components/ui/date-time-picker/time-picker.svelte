@@ -53,7 +53,6 @@
 			bind:ref={minuteRef}
 			{setTime}
 			onLeftFocus={() => hourRef?.focus()}
-			onRightFocus={() => secondRef?.focus()}
 		/>
 	</div>
 
@@ -61,7 +60,7 @@
 		<span class="-translate-y-[2px]">:</span>
 	{/if}
 
-	<div class="grid gap-1 text-center">
+	<!-- <div class="grid gap-1 text-center">
 		{#if view === 'labels'}
 			<Label for="seconds" class="text-xs">Seconds</Label>
 		{/if}
@@ -73,5 +72,5 @@
 			{setTime}
 			onLeftFocus={() => minuteRef?.focus()}
 		/>
-	</div>
+	</div> -->
 </div>

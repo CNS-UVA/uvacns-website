@@ -20,10 +20,9 @@
 	Check out what's coming up at CNS!
 </p>
 
-
 <div class="mt-8 flex flex-row-reverse gap-4">
 	{#if page.data.session?.user?.admin}
-	<EventForm />
+		<EventForm />
 	{/if}
 	<IcsPopover />
 </div>
@@ -40,8 +39,14 @@
 			<p class="text-muted-foreground mt-2">
 				<strong>When:</strong>
 				{evt.start.toLocaleDateString()}
-				{evt.start.toLocaleTimeString()} &mdash; {evt.end.toLocaleDateString()}
-				{evt.end.toLocaleTimeString()}
+				{evt.start.toLocaleTimeString('en-US', {
+					hour: 'numeric',
+					minute: 'numeric'
+				})} &mdash; {evt.end.toLocaleDateString()}
+				{evt.end.toLocaleTimeString('en-US', {
+					hour: 'numeric',
+					minute: 'numeric'
+				})}
 			</p>
 			<p class="text-muted-foreground mt-2"><strong>Where:</strong> {evt.location}</p>
 			<p class="mt-2">{evt.description}</p>

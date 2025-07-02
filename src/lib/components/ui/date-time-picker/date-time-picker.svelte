@@ -19,7 +19,7 @@
 		day: 'numeric',
 		hour: 'numeric',
 		minute: 'numeric',
-		hourCycle: 'h23'
+		hourCycle: 'h12'
 	});
 
 	let contentRef = $state<HTMLElement | null>(null);
@@ -33,7 +33,7 @@
 		setDate?: (date: DateValue) => void;
 	} = $props();
 
-	let time = $state(new Time(date?.hour ?? 0, date?.minute ?? 0, date?.second ?? 0, 0));
+	let time = $state(new Time(date?.hour ?? 0, date?.minute ?? 0, 0, 0));
 
 	function onValueChange(_date: DateValue | undefined) {
 		date = date?.set({
@@ -42,7 +42,7 @@
 			day: _date?.day,
 			minute: time.minute,
 			hour: time.hour,
-			second: time.second,
+			second: 0,
 			millisecond: 0
 		});
 
@@ -52,8 +52,7 @@
 	function setTime(time: Time) {
 		date = date?.set({
 			minute: time.minute,
-			hour: time.hour,
-			second: time.second
+			hour: time.hour
 		});
 
 		setDate?.(date);

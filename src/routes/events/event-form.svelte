@@ -5,12 +5,7 @@
 	import { Input } from '$lib/components/ui/input';
 	import { Textarea } from '$lib/components/ui/textarea';
 	import DateTimePicker from '$lib/components/ui/date-time-picker/date-time-picker.svelte';
-	import {
-		now,
-		getLocalTimeZone,
-		type DateValue,
-		CalendarDateTime
-	} from '@internationalized/date';
+	import { now, getLocalTimeZone, type DateValue, CalendarDateTime } from '@internationalized/date';
 	import { cn } from '$lib/utils';
 	let { event = undefined } = $props();
 	let name = $state<string>(event?.name || '');
@@ -22,10 +17,10 @@
 					event.start.getDate(),
 					event.start.getHours(),
 					event.start.getMinutes(),
-					event.start.getSeconds(),
+					0,
 					0
 				)
-			: now(getLocalTimeZone())
+			: now(getLocalTimeZone()).set({ second: 0, millisecond: 0 })
 	);
 	let endDate = $state<DateValue>(
 		event
@@ -35,10 +30,10 @@
 					event.end.getDate(),
 					event.end.getHours(),
 					event.end.getMinutes(),
-					event.end.getSeconds(),
+					0,
 					0
 				)
-			: now(getLocalTimeZone())
+			: now(getLocalTimeZone()).set({ second: 0, millisecond: 0 })
 	);
 	let location = $state<string>(event?.location || '');
 	let description = $state<string>(event?.description || '');
@@ -50,8 +45,6 @@
 	let open = $state(false);
 
 	async function createOrUpdateEvent() {
-		startDate.set({ millisecond: 0 });
-		endDate.set({ millisecond: 0 });
 		let start = startDate.toDate(getLocalTimeZone()).toISOString();
 		let end = endDate.toDate(getLocalTimeZone()).toISOString();
 		if (event?.id) {
@@ -77,9 +70,6 @@
 	<Dialog.Content class="sm:max-w-[425px]">
 		<Dialog.Header>
 			<Dialog.Title>{event ? 'Edit Event' : 'Add Event'}</Dialog.Title>
-			<!-- <Dialog.Description>
-                Make changes to your profile here. Click save when you're done.
-            </Dialog.Description> -->
 		</Dialog.Header>
 		<div class="grid gap-4 py-4">
 			<div class="grid grid-cols-4 items-center gap-4">
