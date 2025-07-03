@@ -28,7 +28,7 @@
 			the organization's contracts, acts or omissions.
 		</p>
 		<p class="text-muted-foreground text-center text-sm">
-			&#169; 2025 Computer and Network Security Club at the University of Virginia.
+			&#169; {new Date().getFullYear()} Computer and Network Security Club at the University of Virginia.
 		</p>
 	</div>
 </div>

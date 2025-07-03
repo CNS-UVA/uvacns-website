@@ -27,7 +27,7 @@
 				<p class="text-muted-foreground text-sm">Copy this URL and add it to your calendar app.</p>
 			</div>
 			<div
-				class="group flex w-full min-w-0 cursor-pointer items-center justify-between gap-2 rounded-md border px-4 py-3 font-mono text-sm hover:border-primary"
+				class="group hover:border-primary flex w-full min-w-0 cursor-pointer items-center justify-between gap-2 rounded-md border px-4 py-3 font-mono text-sm"
 				on:click={copyIcsUrl}
 				title="Copy to clipboard"
 				tabindex="0"

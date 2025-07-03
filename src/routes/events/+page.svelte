@@ -4,12 +4,10 @@
 	import { ScrollArea } from '$lib/components/ui/scroll-area/index';
 	import { page } from '$app/state';
 	import { Separator } from '$lib/components/ui/separator';
-	import Button from '$lib/components/ui/button/button.svelte';
 	import EventForm from './event-form.svelte';
 	import IcsPopover from './ics-popover.svelte';
 	import DeleteDialog from './delete-dialog.svelte';
-	import LocationCard from './location-card.svelte';
-	import Map from '$lib/components/map.svelte';
+	import type { User } from '../../auth';
 	let { data }: PageProps = $props();
 </script>
 
@@ -23,7 +21,7 @@
 </p>
 
 <div class="mt-8 flex flex-row-reverse gap-4">
-	{#if page.data.session?.user?.admin}
+	{#if (page.data.session?.user as User)?.admin}
 		<EventForm />
 	{/if}
 	<IcsPopover />
@@ -53,13 +51,9 @@
 			<p class="text-muted-foreground mt-2">
 				<strong>Where:</strong>
 				{evt.location}
-				<!-- TODO: make this look better -->
-				<!-- {#if config.locations.find((l) => evt.location.startsWith(l.prefix))}
-					<LocationCard latitude={config.locations.find((l) => evt.location.startsWith(l.prefix))?.latitude} longitude={config.locations.find((l) => evt.location.startsWith(l.prefix))?.longitude} />
-				{/if} -->
 			</p>
 			<p class="mt-2">{evt.description}</p>
-			{#if page.data.session?.user?.admin}
+			{#if (page.data.session?.user as User)?.admin}
 				<div class="mt-4 flex flex-row gap-4">
 					<EventForm event={evt} />
 					<DeleteDialog event={evt} />

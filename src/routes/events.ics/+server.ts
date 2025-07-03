@@ -27,9 +27,7 @@ export async function GET() {
 		description: event.description ?? undefined,
 		geo: (() => {
 			const loc = config.locations.find((l) => event.location.startsWith(l.prefix));
-			return loc
-				? { lat: loc.latitude, lon: loc.longitude }
-				: undefined;
+			return loc ? { lat: loc.latitude, lon: loc.longitude } : undefined;
 		})()
 	}));
 	return new Promise((resolve) => {

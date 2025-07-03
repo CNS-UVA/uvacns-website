@@ -2,6 +2,7 @@ import { db } from '$lib/server/db/index.js';
 import { events } from '$lib/server/db/schema.js';
 import { error, json } from '@sveltejs/kit';
 import { asc } from 'drizzle-orm';
+import type { User } from '../../../auth';
 
 export async function GET() {
 	const allEvents = await db.select().from(events).orderBy(asc(events.start));
@@ -12,7 +13,7 @@ export async function POST({ request, locals }) {
 	const session = await locals.auth();
 	if (!session?.user) {
 		return error(401);
-	} else if (!session?.user?.admin) {
+	} else if (!(session?.user as User)?.admin) {
 		return error(403);
 	}
 	const { name, start, end, location, description } = await request.json();
@@ -30,7 +31,7 @@ export async function DELETE({ locals }) {
 	const session = await locals.auth();
 	if (!session?.user) {
 		return error(401);
-	} else if (!session?.user?.admin) {
+	} else if (!(session?.user as User)?.admin) {
 		return error(403);
 	}
 	await db.delete(events);

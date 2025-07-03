@@ -1,5 +1,17 @@
 import { SvelteKitAuth } from '@auth/sveltekit';
 import Keycloak from '@auth/sveltekit/providers/keycloak';
+import type { AdapterUser, AdapterSession } from '@auth/core/adapters';
+
+export type User = {
+	admin: boolean;
+	defense: boolean;
+	offense: boolean;
+	infrastructure: boolean;
+} & AdapterUser;
+
+export type Session = {
+	user: User;
+} & AdapterSession;
 
 const cnsKeycloak = Keycloak({
 	profile(profile) {
@@ -17,7 +29,13 @@ export const { handle, signIn, signOut } = SvelteKitAuth({
 	providers: [cnsKeycloak],
 	callbacks: {
 		jwt({ token, user }) {
-			if (user) {
+			if (
+				user &&
+				'admin' in user &&
+				'defense' in user &&
+				'offense' in user &&
+				'infrastructure' in user
+			) {
 				token.admin = user.admin;
 				token.defense = user.defense;
 				token.offense = user.offense;
@@ -26,10 +44,18 @@ export const { handle, signIn, signOut } = SvelteKitAuth({
 			return token;
 		},
 		session({ session, token }) {
-			session.user.admin = token.admin;
-			session.user.defense = token.defense;
-			session.user.offense = token.offense;
-			session.user.infrastructure = token.infrastructure;
+			if (typeof token.admin === 'boolean') {
+				(session.user as User).admin = token.admin;
+			}
+			if (typeof token.defense === 'boolean') {
+				(session.user as User).defense = token.defense;
+			}
+			if (typeof token.offense === 'boolean') {
+				(session.user as User).offense = token.offense;
+			}
+			if (typeof token.infrastructure === 'boolean') {
+				(session.user as User).infrastructure = token.infrastructure;
+			}
 			return session;
 		}
 	},

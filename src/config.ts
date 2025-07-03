@@ -67,7 +67,7 @@ const config = {
 		},
 		{
 			prefix: 'Olsson',
-			latitude: 38.0320,
+			latitude: 38.032,
 			longitude: -78.5105
 		},
 		{
@@ -78,11 +78,11 @@ const config = {
 		{
 			prefix: 'Thornton A',
 			latitude: 38.0333,
-			longitude: -78.5010
+			longitude: -78.501
 		},
 		{
 			prefix: 'Thornton B',
-			latitude: 38.0330,
+			latitude: 38.033,
 			longitude: -78.5102
 		},
 		{

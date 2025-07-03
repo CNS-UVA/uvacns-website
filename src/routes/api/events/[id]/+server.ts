@@ -2,6 +2,7 @@ import { db } from '$lib/server/db/index.js';
 import { events } from '$lib/server/db/schema.js';
 import { error, json } from '@sveltejs/kit';
 import { eq } from 'drizzle-orm';
+import type { User } from '../../../../auth';
 
 export async function GET({ params }) {
 	const num = Number(params.id);
@@ -19,7 +20,7 @@ export async function POST({ request, params, locals }) {
 	const session = await locals.auth();
 	if (!session?.user) {
 		return error(401);
-	} else if (!session?.user?.admin) {
+	} else if (!(session?.user as User)?.admin) {
 		return error(403);
 	}
 	const num = Number(params.id);
@@ -41,7 +42,7 @@ export async function DELETE({ params, locals }) {
 	const session = await locals.auth();
 	if (!session?.user) {
 		return error(401);
-	} else if (!session?.user?.admin) {
+	} else if (!(session?.user as User)?.admin) {
 		return error(403);
 	}
 	const num = Number(params.id);

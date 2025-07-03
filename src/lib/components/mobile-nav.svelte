@@ -73,7 +73,9 @@
 					</div>
 					<span class="sr-only">Toggle Menu</span>
 				</div>
-				<span class="flex h-8 items-center text-lg leading-none font-medium"> {config.shortTitle} </span>
+				<span class="flex h-8 items-center text-lg leading-none font-medium">
+					{config.shortTitle}
+				</span>
 			</Button>
 		{/snippet}
 	</Popover.Trigger>
@@ -108,11 +110,19 @@
 						{page.data.session?.user?.name}
 					</div>
 					<div class="flex flex-col gap-3">
-						{@render MobileLink({ content: 'Sign Out', isSignOut: true, class: 'hover:cursor-pointer' })}
+						{@render MobileLink({
+							content: 'Sign Out',
+							isSignOut: true,
+							class: 'hover:cursor-pointer'
+						})}
 					</div>
 				{:else}
 					<div class="flex flex-col gap-3">
-						{@render MobileLink({ content: 'Sign In', isSignIn: true, class: 'hover:cursor-pointer' })}
+						{@render MobileLink({
+							content: 'Sign In',
+							isSignIn: true,
+							class: 'hover:cursor-pointer'
+						})}
 					</div>
 				{/if}
 			</div>
