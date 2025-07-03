@@ -58,6 +58,7 @@ const config = {
 		}
 	],
 	title: 'Computer and Network Security Club @ UVA',
+	shortTitle: 'CNS @ UVA',
 	locations: [
 		{
 			prefix: 'Rice',

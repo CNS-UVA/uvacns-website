@@ -10,7 +10,7 @@
 <p class="text-muted-foreground text-center text-xl leading-7 [&:not(:first-child)]:mt-6">
 	The cybersecurity club at the University of Virginia.
 </p>
-<div class="mx-auto my-8 flex w-full flex-row justify-center gap-4">
+<div class="mx-auto my-8 flex w-full flex-col md:flex-row justify-center gap-4">
 	<Button href="https://lists.virginia.edu/sympa/subscribe/cnsuva"
 		><Mail />Join our mailing list!</Button
 	>

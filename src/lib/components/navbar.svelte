@@ -11,14 +11,17 @@
 	import MoonIcon from '@lucide/svelte/icons/moon';
 	import { resetMode, setMode } from 'mode-watcher';
 	import { buttonVariants } from '$lib/components/ui/button/index';
+	import MobileNav from './mobile-nav.svelte';
+	import config from '../../config';
 </script>
 
 <header class="bg-background sticky top-0 z-50 w-full border-b py-4">
-	<div class="container mx-auto flex flex-row items-center justify-between gap-1">
-		<div class="flex flex-row items-center gap-1">
+	<div class="container mx-auto flex flex-row items-center justify-between gap-1 px-4 md:px-0">
+		<MobileNav class="md:hidden" />
+		<div class="hidden md:flex flex-row items-center gap-1">
 			<Button variant="ghost" class="space-x-2 px-4 py-2 has-[>svg]:px-4" href="/">
 				<Shield color="#f54900" />
-				<div class="font-bold">CNS @ UVA</div>
+				<div class="font-bold">{config.shortTitle}</div>
 			</Button>
 			<NavigationMenu.Root viewport={false}>
 				<NavigationMenu.List>
@@ -87,8 +90,8 @@
 				</NavigationMenu.List>
 			</NavigationMenu.Root>
 		</div>
-		<div class="my-auto flex flex-row items-center gap-1">
-			<DropdownMenu.Root>
+		<div class="my-auto hidden md:flex flex-row items-center gap-1">
+			<!-- <DropdownMenu.Root>
 				<DropdownMenu.Trigger class={buttonVariants({ variant: 'ghost', size: 'icon' })}>
 					<SunIcon
 						class="h-[1.2rem] w-[1.2rem] scale-100 rotate-0 !transition-all dark:scale-0 dark:-rotate-90"
@@ -103,7 +106,7 @@
 					<DropdownMenu.Item onclick={() => setMode('dark')}>Dark</DropdownMenu.Item>
 					<DropdownMenu.Item onclick={() => resetMode()}>System</DropdownMenu.Item>
 				</DropdownMenu.Content>
-			</DropdownMenu.Root>
+			</DropdownMenu.Root> -->
 			{#if page.data.session?.user}
 				<DropdownMenu.Root>
 					<DropdownMenu.Trigger>
@@ -119,10 +122,10 @@
 						<DropdownMenu.Group>
 							<DropdownMenu.Label>{page.data.session?.user?.name}</DropdownMenu.Label>
 							<DropdownMenu.Separator />
-							<DropdownMenu.Item>Profile</DropdownMenu.Item>
+							<!-- <DropdownMenu.Item>Profile</DropdownMenu.Item>
 							{#if page.data.session?.user?.admin}
 								<DropdownMenu.Item>Admin</DropdownMenu.Item>
-							{/if}
+							{/if} -->
 							<DropdownMenu.Item onclick={signOut}>Sign Out</DropdownMenu.Item>
 						</DropdownMenu.Group>
 					</DropdownMenu.Content>
