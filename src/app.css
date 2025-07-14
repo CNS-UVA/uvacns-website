@@ -191,3 +191,8 @@ a.typography {
 .typography a {
 	@apply hover:text-primary underline hover:no-underline;
 }
+
+:root {
+	--font-sans: 'Inter', sans-serif;
+	--font-mono: 'Fira Code', monospace;
+}
