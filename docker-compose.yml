@@ -17,3 +17,5 @@ services:
       POSTGRES_USER: cns
       POSTGRES_PASSWORD: chiapet1
       POSTGRES_DB: cns
+    volumes:
+      - ./db:/var/lib/postgresql/data
