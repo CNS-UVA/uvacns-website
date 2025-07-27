@@ -57,10 +57,13 @@
 	},
 	"dependencies": {
 		"@auth/sveltekit": "^1.10.0",
+		"@fortawesome/free-brands-svg-icons": "^7.0.0",
+		"@fortawesome/free-solid-svg-icons": "^7.0.0",
 		"drizzle-orm": "^0.40.0",
 		"ics": "^3.8.1",
 		"leaflet": "^1.9.4",
 		"mode-watcher": "^1.0.8",
-		"postgres": "^3.4.5"
+		"postgres": "^3.4.5",
+		"svelte-fa": "^4.0.4"
 	}
 }

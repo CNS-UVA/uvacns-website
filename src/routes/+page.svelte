@@ -1,9 +1,9 @@
 <script lang="ts">
 	import Button from '$lib/components/ui/button/button.svelte';
 	import * as Carousel from '$lib/components/ui/carousel/index';
-	import Mail from '@lucide/svelte/icons/mail';
-	import MessageSquare from '@lucide/svelte/icons/message-square';
-	import Send from '@lucide/svelte/icons/send';
+	import Fa from 'svelte-fa';
+	import { faEnvelope, faPaperPlane } from '@fortawesome/free-solid-svg-icons';
+	import { faDiscord } from '@fortawesome/free-brands-svg-icons';
 </script>
 
 <h1 class="typography">Computer and Network Security Club @ UVA</h1>
@@ -12,10 +12,9 @@
 </p>
 <div class="mx-auto my-8 flex w-full flex-col justify-center gap-4 md:flex-row">
 	<Button href="https://lists.virginia.edu/sympa/subscribe/cnsuva"
-		><Mail />Join our mailing list!</Button
-	>
-	<Button href="https://discord.com/invite/AeSy8wM3NV"><MessageSquare />Join our Discord!</Button>
-	<Button href="mailto:cnsuva-officers@virginia.edu"><Send />Contact us!</Button>
+		><Fa icon={faEnvelope} />Join our mailing list!</Button
+	><Button href="https://discord.com/invite/AeSy8wM3NV"><Fa icon={faDiscord} />Join our Discord!</Button>
+	<Button href="mailto:cnsuva-officers@virginia.edu"><Fa icon={faPaperPlane} />Contact us!</Button>
 </div>
 <div class="flex size-full grow place-content-center">
 	<Carousel.Root

@@ -5,10 +5,12 @@
 	import * as Avatar from '$lib/components/ui/avatar/index';
 	import Button from './ui/button/button.svelte';
 	import { signIn, signOut } from '@auth/sveltekit/client';
-	import Shield from '@lucide/svelte/icons/shield';
 	import * as DropdownMenu from '$lib/components/ui/dropdown-menu/index';
 	import MobileNav from './mobile-nav.svelte';
 	import config from '../../config';
+	import Fa from 'svelte-fa';
+	import { faShieldHalved } from '@fortawesome/free-solid-svg-icons';
+	import Logo from './logo.svelte';
 </script>
 
 <header class="bg-background sticky top-0 z-50 w-full border-b py-4">
@@ -16,7 +18,8 @@
 		<MobileNav class="md:hidden" />
 		<div class="hidden flex-row items-center gap-1 md:flex">
 			<Button variant="ghost" class="space-x-2 px-4 py-2 has-[>svg]:px-4" href="/">
-				<Shield color="#f54900" />
+				<!-- <Fa icon={faShieldHalved} color="#f54900" /> -->
+				 <Logo />
 				<div class="font-bold">{config.shortTitle}</div>
 			</Button>
 			<NavigationMenu.Root viewport={false}>
