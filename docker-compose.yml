@@ -18,4 +18,4 @@ services:
       POSTGRES_PASSWORD: chiapet1
       POSTGRES_DB: cns
     volumes:
-      - ./db:/var/lib/postgresql/data:z
+      - ./db:/var/lib/postgresql/data:Z

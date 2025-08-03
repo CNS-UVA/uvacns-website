@@ -4,12 +4,15 @@
 
 	export let latitude: number;
 	export let longitude: number;
-	export let zoom: number = 18;
+	export let zoom: number = 16;
+	export let popupText: string = '';
 </script>
 
 <HoverCard.Root>
-	<HoverCard.Trigger>Where?</HoverCard.Trigger>
-	<HoverCard.Content>
-		<Map {latitude} {longitude} {zoom} />
+	<HoverCard.Trigger class="text-xs underline hover:no-underline hover:text-primary">Where?</HoverCard.Trigger>
+	<HoverCard.Content class="w-80 h-60 p-2">
+		<div class="w-full h-full rounded border overflow-hidden">
+			<Map {latitude} {longitude} {zoom} {popupText} />
+		</div>
 	</HoverCard.Content>
 </HoverCard.Root>

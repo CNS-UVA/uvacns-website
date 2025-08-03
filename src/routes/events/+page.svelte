@@ -7,8 +7,26 @@
 	import EventForm from './event-form.svelte';
 	import IcsPopover from './ics-popover.svelte';
 	import DeleteDialog from './delete-dialog.svelte';
+	import LocationCard from './location-card.svelte';
 	import type { User } from '../../auth';
 	let { data }: PageProps = $props();
+
+	// Function to get coordinates for a location
+	function getLocationCoordinates(location: string): { latitude: number; longitude: number } | null {
+		const matchedLocation = config.locations.find(loc => 
+			location.toLowerCase().startsWith(loc.prefix.toLowerCase())
+		);
+		
+		if (matchedLocation) {
+			return {
+				latitude: matchedLocation.latitude,
+				longitude: matchedLocation.longitude
+			};
+		}
+		
+		// Return null if no match found
+		return null;
+	}
 </script>
 
 <svelte:head>
@@ -35,6 +53,7 @@
 			</p>
 		{/if}
 		{#each data.upcoming as evt, i}
+			{@const coords = getLocationCoordinates(evt.location)}
 			<h2 class="text-3xl font-semibold tracking-tight transition-colors">{evt.name}</h2>
 			<p class="text-muted-foreground mt-2">
 				<strong>When:</strong>
@@ -48,10 +67,13 @@
 					minute: 'numeric'
 				})}
 			</p>
-			<p class="text-muted-foreground mt-2">
+			<div class="text-muted-foreground mt-2 flex items-center gap-2">
 				<strong>Where:</strong>
 				{evt.location}
-			</p>
+				{#if coords}
+					<LocationCard latitude={coords.latitude} longitude={coords.longitude} popupText={evt.location} />
+				{/if}
+			</div>
 			<p class="mt-2">{evt.description}</p>
 			{#if (page.data.session?.user as User)?.admin}
 				<div class="mt-4 flex flex-row gap-4">
