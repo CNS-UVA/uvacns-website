@@ -19,6 +19,7 @@
 			to red team and social engineering events. Accolades include:
 		</p>
 		<ul>
+			<li>Second place, 2025 TribeCTF</li>
 			<li>Third place, 2025 Virginia Cyber Fusion competition</li>
 			<li>
 				Second place in the undergraduate division, 2024 Temple Social Engineering Competition
