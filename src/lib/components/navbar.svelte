@@ -44,6 +44,9 @@
 										<li>
 											<NavigationMenu.Link href={resource.rootUrl}>
 												<div class="font-medium">{resource.clientName}</div>
+												{#if resource.description}
+													<div class="text-muted-foreground">{resource.description}</div>
+												{/if}
 											</NavigationMenu.Link>
 										</li>
 									{/each}
