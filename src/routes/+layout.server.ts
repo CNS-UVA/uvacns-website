@@ -14,9 +14,9 @@ export const load: LayoutServerLoad = async (event) => {
 
 	const res = await fetch(`${env.AUTH_KEYCLOAK_ISSUER}/account/applications`, {
 		headers: {
-			Authorization: `Bearer ${session.accessToken}`
+			Authorization: `Bearer ${session.accessToken}`,
+			'Content-Type': 'application/json'
 		},
-		redirect: 'manual'
 	});
 
 	if (!res.ok) {
