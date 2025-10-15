@@ -11,6 +11,7 @@ export type User = {
 
 export type Session = {
 	user: User;
+	accessToken: string;
 } & AdapterSession;
 
 const cnsKeycloak = Keycloak({
@@ -28,7 +29,10 @@ const cnsKeycloak = Keycloak({
 export const { handle, signIn, signOut } = SvelteKitAuth({
 	providers: [cnsKeycloak],
 	callbacks: {
-		jwt({ token, user }) {
+		jwt({ token, user, account }) {
+			if (account) {
+				token.accessToken = account.access_token;
+			}
 			if (
 				user &&
 				'admin' in user &&
@@ -44,6 +48,7 @@ export const { handle, signIn, signOut } = SvelteKitAuth({
 			return token;
 		},
 		session({ session, token }) {
+			(session as Session).accessToken = token.accessToken as string;
 			if (typeof token.admin === 'boolean') {
 				(session.user as User).admin = token.admin;
 			}

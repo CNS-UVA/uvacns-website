@@ -35,6 +35,22 @@
 							{/snippet}
 						</NavigationMenu.Link>
 					</NavigationMenu.Item>
+					{#if page.data.session?.user && page.data.resources && page.data.resources.length > 0}
+						<NavigationMenu.Item>
+							<NavigationMenu.Trigger>Resources</NavigationMenu.Trigger>
+							<NavigationMenu.Content>
+								<ul class="grid w-80 gap-4 p-2">
+									{#each page.data.resources as resource}
+										<li>
+											<NavigationMenu.Link href={resource.rootUrl}>
+												<div class="font-medium">{resource.clientName}</div>
+											</NavigationMenu.Link>
+										</li>
+									{/each}
+								</ul>
+							</NavigationMenu.Content>
+						</NavigationMenu.Item>
+					{/if}
 					<NavigationMenu.Item>
 						<NavigationMenu.Trigger>Divisions</NavigationMenu.Trigger>
 						<NavigationMenu.Content>
