@@ -86,6 +86,10 @@
 					<DropdownMenu.Trigger>
 						<Button variant="ghost">
 							<Avatar.Root>
+								<Avatar.Image
+									src={page.data.session.user.image ?? undefined}
+									alt={page.data.session.user.name ?? ''}
+								/>
 								<Avatar.Fallback>
 									{page.data.session?.user?.name?.at(0)}
 								</Avatar.Fallback>

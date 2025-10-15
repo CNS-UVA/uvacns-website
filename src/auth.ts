@@ -21,7 +21,8 @@ const cnsKeycloak = Keycloak({
 			defense: profile.groups.includes('cyber-defense-division'),
 			offense: profile.groups.includes('cyber-offense-division'),
 			infrastructure: profile.groups.includes('infrastructure-division'),
-			...profile
+			...profile,
+			image: profile.picture
 		};
 	}
 });
@@ -44,6 +45,7 @@ export const { handle, signIn, signOut } = SvelteKitAuth({
 				token.defense = user.defense;
 				token.offense = user.offense;
 				token.infrastructure = user.infrastructure;
+				token.picture = user.image;
 			}
 			return token;
 		},
@@ -60,6 +62,9 @@ export const { handle, signIn, signOut } = SvelteKitAuth({
 			}
 			if (typeof token.infrastructure === 'boolean') {
 				(session.user as User).infrastructure = token.infrastructure;
+			}
+			if (typeof token.picture === 'string') {
+				(session.user as User).image = token.picture;
 			}
 			return session;
 		}
