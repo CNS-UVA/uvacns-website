@@ -84,7 +84,7 @@
 			{#if page.data.session?.user}
 				<DropdownMenu.Root>
 					<DropdownMenu.Trigger>
-						<Button variant="ghost">
+						<Button variant="ghost" class="align-middle">
 							<Avatar.Root>
 								<Avatar.Image
 									src={page.data.session.user.image ?? undefined}
