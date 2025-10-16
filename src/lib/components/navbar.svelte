@@ -35,25 +35,6 @@
 							{/snippet}
 						</NavigationMenu.Link>
 					</NavigationMenu.Item>
-					{#if page.data.session?.user && page.data.resources && page.data.resources.length > 0}
-						<NavigationMenu.Item>
-							<NavigationMenu.Trigger>Resources</NavigationMenu.Trigger>
-							<NavigationMenu.Content>
-								<ul class="grid w-80 gap-4 p-2">
-									{#each page.data.resources as resource}
-										<li>
-											<NavigationMenu.Link href={resource.rootUrl}>
-												<div class="font-medium">{resource.clientName}</div>
-												{#if resource.description}
-													<div class="text-muted-foreground">{resource.description}</div>
-												{/if}
-											</NavigationMenu.Link>
-										</li>
-									{/each}
-								</ul>
-							</NavigationMenu.Content>
-						</NavigationMenu.Item>
-					{/if}
 					<NavigationMenu.Item>
 						<NavigationMenu.Trigger>Divisions</NavigationMenu.Trigger>
 						<NavigationMenu.Content>
@@ -77,6 +58,25 @@
 							</ul>
 						</NavigationMenu.Content>
 					</NavigationMenu.Item>
+					{#if page.data.session?.user && page.data.resources && page.data.resources.length > 0}
+						<NavigationMenu.Item>
+							<NavigationMenu.Trigger>Resources</NavigationMenu.Trigger>
+							<NavigationMenu.Content>
+								<ul class="grid w-80 gap-4 p-2">
+									{#each page.data.resources as resource}
+										<li>
+											<NavigationMenu.Link href={resource.rootUrl}>
+												<div class="font-medium">{resource.clientName}</div>
+												{#if resource.description}
+													<div class="text-muted-foreground">{resource.description}</div>
+												{/if}
+											</NavigationMenu.Link>
+										</li>
+									{/each}
+								</ul>
+							</NavigationMenu.Content>
+						</NavigationMenu.Item>
+					{/if}
 				</NavigationMenu.List>
 			</NavigationMenu.Root>
 		</div>
@@ -84,7 +84,7 @@
 			{#if page.data.session?.user}
 				<DropdownMenu.Root>
 					<DropdownMenu.Trigger>
-						<Button variant="ghost">
+						<Button variant="ghost" class="size-8 rounded-full p-0">
 							<Avatar.Root>
 								<Avatar.Image
 									src={page.data.session.user.image ?? undefined}

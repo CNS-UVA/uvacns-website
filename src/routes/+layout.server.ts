@@ -21,7 +21,7 @@ export const load: LayoutServerLoad = async (event) => {
 
 	if (!res.ok) {
 		return {
-			session,
+			session: null,
 			resources: []
 		};
 	}
