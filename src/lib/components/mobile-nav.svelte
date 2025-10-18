@@ -6,6 +6,7 @@
 	import { page } from '$app/state';
 	import { signIn, signOut } from '@auth/sveltekit/client';
 	import config from '../../config';
+	import { mainNavigation, divisionNavigation } from '$lib/navigation';
 
 	type MobileLinkProps = HTMLAnchorAttributes & {
 		content?: string;
@@ -92,18 +93,29 @@
 				<div class="text-muted-foreground text-sm font-medium">Menu</div>
 				<div class="flex flex-col gap-3">
 					{@render MobileLink({ href: '/', content: 'Home' })}
-					{@render MobileLink({ href: '/about', content: 'About' })}
-					{@render MobileLink({ href: '/events', content: 'Events' })}
+					{#each mainNavigation as item}
+						{@render MobileLink({ href: item.href, content: item.title })}
+					{/each}
 				</div>
 			</div>
 			<div class="flex flex-col gap-4">
-				<div class="text-muted-foreground text-sm font-medium">Divisions</div>
+				<div class="text-muted-foreground text-sm font-medium">{divisionNavigation.title}</div>
 				<div class="flex flex-col gap-3">
-					{@render MobileLink({ href: '/divisions/defense', content: 'Cyber Defense' })}
-					{@render MobileLink({ href: '/divisions/offense', content: 'Cyber Offense' })}
-					{@render MobileLink({ href: '/divisions/infrastructure', content: 'Infrastructure' })}
+					{#each divisionNavigation.items as division}
+						{@render MobileLink({ href: division.href, content: division.title })}
+					{/each}
 				</div>
 			</div>
+			{#if page.data.session?.user && page.data.resources && page.data.resources.length > 0}
+				<div class="flex flex-col gap-4">
+					<div class="text-muted-foreground text-sm font-medium">Resources</div>
+					<div class="flex flex-col gap-3">
+						{#each page.data.resources as resource}
+							{@render MobileLink({ href: resource.rootUrl, content: resource.clientName })}
+						{/each}
+					</div>
+				</div>
+			{/if}
 			<div class="flex flex-col gap-4">
 				{#if page.data.session?.user}
 					<div class="text-muted-foreground text-sm font-medium">

@@ -9,6 +9,7 @@
 	import MobileNav from './mobile-nav.svelte';
 	import config from '../../config';
 	import Logo from './logo.svelte';
+	import { mainNavigation, divisionNavigation } from '$lib/navigation';
 </script>
 
 <header class="bg-background sticky top-0 z-50 w-full border-b py-4">
@@ -21,39 +22,28 @@
 			</Button>
 			<NavigationMenu.Root viewport={false}>
 				<NavigationMenu.List>
+					{#each mainNavigation as item}
+						<NavigationMenu.Item>
+							<NavigationMenu.Link>
+								{#snippet child()}
+									<a href={item.href} class={navigationMenuTriggerStyle()}>{item.title}</a>
+								{/snippet}
+							</NavigationMenu.Link>
+						</NavigationMenu.Item>
+					{/each}
 					<NavigationMenu.Item>
-						<NavigationMenu.Link>
-							{#snippet child()}
-								<a href="/about" class={navigationMenuTriggerStyle()}>About</a>
-							{/snippet}
-						</NavigationMenu.Link>
-					</NavigationMenu.Item>
-					<NavigationMenu.Item>
-						<NavigationMenu.Link>
-							{#snippet child()}
-								<a href="/events" class={navigationMenuTriggerStyle()}>Events</a>
-							{/snippet}
-						</NavigationMenu.Link>
-					</NavigationMenu.Item>
-					<NavigationMenu.Item>
-						<NavigationMenu.Trigger>Divisions</NavigationMenu.Trigger>
+						<NavigationMenu.Trigger>{divisionNavigation.title}</NavigationMenu.Trigger>
 						<NavigationMenu.Content>
 							<ul class="grid w-80 gap-4 p-2">
 								<li>
-									<NavigationMenu.Link href="/divisions/defense">
-										<div class="font-medium">Cyber Defense</div>
-										<div class="text-muted-foreground">Defend against cyber attacks.</div>
-									</NavigationMenu.Link>
-									<NavigationMenu.Link href="/divisions/offense">
-										<div class="font-medium">Cyber Offense</div>
-										<div class="text-muted-foreground">Exploit vulnerabilities in systems.</div>
-									</NavigationMenu.Link>
-									<NavigationMenu.Link href="/divisions/infrastructure">
-										<div class="font-medium">Infrastructure</div>
-										<div class="text-muted-foreground">
-											Maintain the systems that keep CNS running.
-										</div>
-									</NavigationMenu.Link>
+									{#each divisionNavigation.items as division}
+										<NavigationMenu.Link href={division.href}>
+											<div class="font-medium">{division.title}</div>
+											{#if division.description}
+												<div class="text-muted-foreground">{division.description}</div>
+											{/if}
+										</NavigationMenu.Link>
+									{/each}
 								</li>
 							</ul>
 						</NavigationMenu.Content>
