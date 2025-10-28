@@ -4,6 +4,7 @@
 	import Mail from '@lucide/svelte/icons/mail';
 	import MessageSquare from '@lucide/svelte/icons/message-square';
 	import Send from '@lucide/svelte/icons/send';
+	import config from '../config';
 </script>
 
 <h1 class="typography">Computer and Network Security Club @ UVA</h1>
@@ -23,42 +24,17 @@
 			loop: true
 		}}
 	>
+		
 		<Carousel.Content>
-			<Carousel.Item>
-				<img
-					class="m-auto size-full object-contain"
-					src="/images/CCDCTeam2025.jpg"
-					alt="Our 2025 cyber defense team."
-				/>
-			</Carousel.Item>
-			<Carousel.Item>
-				<img
-					class="m-auto size-full object-contain"
-					src="/images/CCDCTeam2024.jpg"
-					alt="Our 2024 cyber defense team."
-				/>
-			</Carousel.Item>
-			<Carousel.Item>
-				<img
-					class="m-auto size-full object-contain"
-					src="/images/CCDCTeam2023.jpg"
-					alt="Our 2023 cyber defense team."
-				/>
-			</Carousel.Item>
-			<Carousel.Item>
-				<img
-					class="m-auto size-full object-contain"
-					src="/images/CCDCTeam2019.jpg"
-					alt="Our 2019 cyber defense team."
-				/>
-			</Carousel.Item>
-			<Carousel.Item>
-				<img
-					class="m-auto size-full object-contain"
-					src="/images/CCDCTeam2018.jpg"
-					alt="Our 2018 cyber defense team."
-				/>
-			</Carousel.Item>
+			{#each config.carousel as image}
+				<Carousel.Item>
+					<img
+						class="m-auto size-full object-contain"
+						src={image.src}
+						alt={image.alt}
+					/>
+				</Carousel.Item>
+			{/each}
 		</Carousel.Content>
 		<Carousel.Previous />
 		<Carousel.Next />

@@ -11,6 +11,7 @@
 	The Cyber Offense Division identifies and exploits vulnerabilities in computers and networks for
 	fun and profit.
 </p>
+<img class="m-auto w-3xl mt-10" src="/images/AustinNikhilCyberFusion2025.jpg" alt="Cyber Defense Division members in competition" />
 <div class="typography">
 	<div>
 		<h2>Achievements</h2>
@@ -20,10 +21,12 @@
 		</p>
 		<ul>
 			<li>Second place, 2025 TribeCTF</li>
-			<li>Third place, 2025 Virginia Cyber Fusion competition</li>
+			<li>Third place, 2025 Commonwealth Cyber Fusion competition</li>
 			<li>
 				Second place in the undergraduate division, 2024 Temple Social Engineering Competition
 			</li>
+			<li>Second place, 2024 Commonwealth Cyber Fusion competition</li>
+			<li>First place, 2023 Commonwealth Cyber Fusion competition</li>
 			<li>First place, 2019 Northeast Collegiate Penetration Testing Competition</li>
 		</ul>
 	</div>
