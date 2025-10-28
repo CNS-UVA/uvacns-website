@@ -11,6 +11,7 @@
 	The Infrastructure Division manages CNS's computing resources and develops technical solutions to
 	enable the other parts of the club.
 </p>
+<img class="m-auto w-3xl mt-10" src="/images/ArjunChaseInstallingServer.jpg" alt="Infrastructure Division members installing a server" />
 <div class="typography">
 	<div>
 		<h2>The CNS Network</h2>
