@@ -1,38 +1,26 @@
-import { db } from '$lib/server/db/index.js';
-import { events } from '$lib/server/db/schema.js';
-import { asc } from 'drizzle-orm';
-import { createEvents } from 'ics';
-import config from '../../config';
+import { env } from '$env/dynamic/private';
+import { error } from '@sveltejs/kit';
 
-export async function GET() {
-	const allEvents = await db.select().from(events).orderBy(asc(events.start));
-	// create ICS file with all items in allEvents
-	const icsData = allEvents.map((event) => ({
-		start: [
-			event.start.getFullYear(),
-			event.start.getMonth() + 1,
-			event.start.getDate(),
-			event.start.getHours(),
-			event.start.getMinutes()
-		] as [number, number, number, number, number],
-		end: [
-			event.end.getFullYear(),
-			event.end.getMonth() + 1,
-			event.end.getDate(),
-			event.end.getHours(),
-			event.end.getMinutes()
-		] as [number, number, number, number, number],
-		title: event.name,
-		location: event.location,
-		description: event.description ?? undefined,
-		geo: (() => {
-			const loc = config.locations.find((l) => event.location.startsWith(l.prefix));
-			return loc ? { lat: loc.latitude, lon: loc.longitude } : undefined;
-		})()
-	}));
-	return new Promise((resolve) => {
-		createEvents(icsData, (_error, value) => {
-			resolve(new Response(value, { headers: { 'Content-Type': 'text/calendar' } }));
+export async function GET({ fetch }) {
+	if (!env.CALENDAR_URL) {
+		return new Response('CALENDAR_URL is not set', { status: 500 });
+	}
+
+	try {
+		const response = await fetch(env.CALENDAR_URL);
+		if (!response.ok) {
+			return error(response.status as any, `Failed to fetch calendar: ${response.statusText}`);
+		}
+
+		const body = await response.text();
+		return new Response(body, {
+			headers: {
+				'Content-Type': 'text/calendar',
+				'Cache-Control': 'public, max-age=3600'
+			}
 		});
-	});
+	} catch (e) {
+		console.error('Error proxying calendar:', e);
+		return error(500, 'Internal Server Error');
+	}
 }

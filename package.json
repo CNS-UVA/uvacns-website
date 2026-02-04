@@ -60,6 +60,7 @@
 		"@fortawesome/free-brands-svg-icons": "^7.0.0",
 		"@fortawesome/free-solid-svg-icons": "^7.0.0",
 		"drizzle-orm": "^0.40.0",
+		"ical.js": "^2.2.1",
 		"ics": "^3.8.1",
 		"leaflet": "^1.9.4",
 		"mode-watcher": "^1.0.8",
