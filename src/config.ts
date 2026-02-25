@@ -103,36 +103,36 @@ const config = {
 	],
 	carousel: [
 		{
-			src: "/images/CCDCTeam2025.jpg",
-			alt: "Our 2025 cyber defense team."
+			src: '/images/CCDCTeam2025.jpg',
+			alt: 'Our 2025 cyber defense team.'
 		},
 		{
-			src: "/images/CyberFusion2025.jpg",
-			alt: "Our 2025 Commonwealth Cyber Fusion team."
+			src: '/images/CyberFusion2025.jpg',
+			alt: 'Our 2025 Commonwealth Cyber Fusion team.'
 		},
 		{
-			src: "/images/CCDCTeam2024.jpg",
-			alt: "Our 2024 cyber defense team."
+			src: '/images/CCDCTeam2024.jpg',
+			alt: 'Our 2024 cyber defense team.'
 		},
 		{
-			src: "/images/CyberFusion2024.jpg",
-			alt: "Our 2024 Commonwealth Cyber Fusion team."
+			src: '/images/CyberFusion2024.jpg',
+			alt: 'Our 2024 Commonwealth Cyber Fusion team.'
 		},
 		{
-			src: "/images/CCDCTeam2023.jpg",
-			alt: "Our 2023 cyber defense team."
+			src: '/images/CCDCTeam2023.jpg',
+			alt: 'Our 2023 cyber defense team.'
 		},
 		{
-			src: "/images/CyberFusion2023.jpg",
-			alt: "Our 2023 Commonwealth Cyber Fusion team."
+			src: '/images/CyberFusion2023.jpg',
+			alt: 'Our 2023 Commonwealth Cyber Fusion team.'
 		},
 		{
-			src: "/images/CCDCTeam2019.jpg",
-			alt: "Our 2019 cyber defense team."
+			src: '/images/CCDCTeam2019.jpg',
+			alt: 'Our 2019 cyber defense team.'
 		},
 		{
-			src: "/images/CCDCTeam2018.jpg",
-			alt: "Our 2018 cyber defense team."
+			src: '/images/CCDCTeam2018.jpg',
+			alt: 'Our 2018 cyber defense team.'
 		}
 	]
 };

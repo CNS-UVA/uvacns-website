@@ -11,7 +11,11 @@
 	The Cyber Offense Division identifies and exploits vulnerabilities in computers and networks for
 	fun and profit.
 </p>
-<img class="m-auto w-3xl mt-10" src="/images/AustinNikhilCyberFusion2025.jpg" alt="Cyber Defense Division members in competition" />
+<img
+	class="m-auto mt-10 w-3xl"
+	src="/images/AustinNikhilCyberFusion2025.jpg"
+	alt="Cyber Defense Division members in competition"
+/>
 <div class="typography">
 	<div>
 		<h2>Achievements</h2>
@@ -20,6 +24,7 @@
 			to red team and social engineering events. Accolades include:
 		</p>
 		<ul>
+			<li>Second place, 2026 Commonwealth Cyber Fusion competition</li>
 			<li>Second place, 2025 TribeCTF</li>
 			<li>Third place, 2025 Commonwealth Cyber Fusion competition</li>
 			<li>
@@ -34,6 +39,12 @@
 		<h2>In the News</h2>
 		<p>Read about the Cyber Offense Division here:</p>
 		<ul>
+			<li>
+				<a
+					href="https://www.vmi.edu/news/headlines/2025-2026/vmi-hosts-9th-annual-commonwealth-cyber-fusion-event.php"
+					>VMI Hosts 9th Annual Commonwealth Cyber Fusion Event</a
+				> (February 24, 2026)
+			</li>
 			<li>
 				<a href="https://cyberinnovation.virginia.edu/node/721"
 					>UVA Cyber Team Shines at Virginia Cyber Fusion Competition</a

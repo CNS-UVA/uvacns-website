@@ -21,7 +21,7 @@
 			}
 
 			// Wait a bit longer for the hover card to be fully visible
-			await new Promise(resolve => setTimeout(resolve, 100));
+			await new Promise((resolve) => setTimeout(resolve, 100));
 
 			map = leaflet.map(mapElement, {
 				center: [latitude, longitude],
@@ -96,7 +96,7 @@
 		width: 100% !important;
 		z-index: 1;
 	}
-	
+
 	:global(.leaflet-control-attribution) {
 		display: none;
 	}

@@ -24,15 +24,10 @@
 			loop: true
 		}}
 	>
-		
 		<Carousel.Content>
 			{#each config.carousel as image}
 				<Carousel.Item>
-					<img
-						class="m-auto size-full object-contain"
-						src={image.src}
-						alt={image.alt}
-					/>
+					<img class="m-auto size-full object-contain" src={image.src} alt={image.alt} />
 				</Carousel.Item>
 			{/each}
 		</Carousel.Content>

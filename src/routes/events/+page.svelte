@@ -12,18 +12,20 @@
 	let { data }: PageProps = $props();
 
 	// Function to get coordinates for a location
-	function getLocationCoordinates(location: string): { latitude: number; longitude: number } | null {
-		const matchedLocation = config.locations.find(loc => 
+	function getLocationCoordinates(
+		location: string
+	): { latitude: number; longitude: number } | null {
+		const matchedLocation = config.locations.find((loc) =>
 			location.toLowerCase().startsWith(loc.prefix.toLowerCase())
 		);
-		
+
 		if (matchedLocation) {
 			return {
 				latitude: matchedLocation.latitude,
 				longitude: matchedLocation.longitude
 			};
 		}
-		
+
 		// Return null if no match found
 		return null;
 	}
@@ -38,5 +40,7 @@
 	Check out what's coming up at CNS!
 </p>
 
-<iframe class="mt-8 w-full h-dvh" src="https://nextcloud.uvacns.com/apps/calendar/embed/2GAnmSSmGbSKT4w3"></iframe>
-
+<iframe
+	class="mt-8 h-dvh w-full"
+	src="https://nextcloud.uvacns.com/apps/calendar/embed/2GAnmSSmGbSKT4w3"
+></iframe>

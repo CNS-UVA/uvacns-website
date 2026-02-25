@@ -9,9 +9,11 @@
 </script>
 
 <HoverCard.Root>
-	<HoverCard.Trigger class="text-xs underline hover:no-underline hover:text-primary">Where?</HoverCard.Trigger>
-	<HoverCard.Content class="w-80 h-60 p-2">
-		<div class="w-full h-full rounded border overflow-hidden">
+	<HoverCard.Trigger class="hover:text-primary text-xs underline hover:no-underline"
+		>Where?</HoverCard.Trigger
+	>
+	<HoverCard.Content class="h-60 w-80 p-2">
+		<div class="h-full w-full overflow-hidden rounded border">
 			<Map {latitude} {longitude} {zoom} {popupText} />
 		</div>
 	</HoverCard.Content>

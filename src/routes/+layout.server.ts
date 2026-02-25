@@ -16,7 +16,7 @@ export const load: LayoutServerLoad = async (event) => {
 		headers: {
 			Authorization: `Bearer ${session.accessToken}`,
 			'Content-Type': 'application/json'
-		},
+		}
 	});
 
 	if (!res.ok) {
@@ -26,12 +26,15 @@ export const load: LayoutServerLoad = async (event) => {
 		};
 	}
 
-	const resources = (await res.json()) as { clientId: string, clientName: string; rootUrl: string }[];
+	const resources = (await res.json()) as {
+		clientId: string;
+		clientName: string;
+		rootUrl: string;
+	}[];
 
 	const filteredResources = resources
 		.filter(
-			(resource) =>
-				resource.clientId !== 'account-console' && resource.clientId !== 'website'
+			(resource) => resource.clientId !== 'account-console' && resource.clientId !== 'website'
 		)
 		.sort((a, b) => a.clientName.localeCompare(b.clientName));
 

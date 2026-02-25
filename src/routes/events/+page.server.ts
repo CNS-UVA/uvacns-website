@@ -10,11 +10,11 @@ export const load: PageServerLoad = async ({ fetch }) => {
 	try {
 		const response = await fetch(env.CALENDAR_URL);
 		const text = await response.text();
-		
+
 		const events = parseICS(text);
-		
+
 		const upcoming = events
-			.filter(e => e.end > new Date())
+			.filter((e) => e.end > new Date())
 			.sort((a, b) => a.start.getTime() - b.start.getTime());
 
 		return {
@@ -32,7 +32,7 @@ function parseICS(icsData: string) {
 		const vcalendar = new ICAL.Component(jcalData);
 		const vevents = vcalendar.getAllSubcomponents('vevent');
 
-		return vevents.map(vevent => {
+		return vevents.map((vevent) => {
 			const event = new ICAL.Event(vevent);
 			return {
 				id: 0, // Placeholder ID

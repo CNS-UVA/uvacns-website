@@ -11,7 +11,11 @@
 	The Cyber Defense Division protects computers, networks, and applications from cyber attacks
 	through hardening and incident response.
 </p>
-<img class="m-auto w-3xl mt-10" src="/images/LuluCharlotte2024Quals.jpg" alt="Cyber Defense Division members in competition" />
+<img
+	class="m-auto mt-10 w-3xl"
+	src="/images/LuluCharlotte2024Quals.jpg"
+	alt="Cyber Defense Division members in competition"
+/>
 <div class="typography">
 	<div>
 		<h2>Achievements</h2>
