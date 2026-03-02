@@ -103,6 +103,10 @@ const config = {
 	],
 	carousel: [
 		{
+			src: '/images/CyberFusion2026.jpg',
+			alt: 'Our 2026 Commonwealth Cyber Fusion team.'
+		},
+		{
 			src: '/images/CCDCTeam2025.jpg',
 			alt: 'Our 2025 cyber defense team.'
 		},
