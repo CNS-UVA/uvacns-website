@@ -1,7 +1,7 @@
 <script lang="ts">
 	import Button from '$lib/components/ui/button/button.svelte';
-    import * as Card from '$lib/components/ui/card/index';
-    import BookOpen from '@lucide/svelte/icons/book-open';
+	import * as Card from '$lib/components/ui/card/index';
+	import BookOpen from '@lucide/svelte/icons/book-open';
 	import config from '../../config';
 </script>
 
@@ -14,12 +14,12 @@
 	Team information for the 2026 CARE Social Engineering Competition.
 </p>
 <div class="typography mt-8">
-    <h2>Team Information</h2>
+	<h2>Team Information</h2>
 	<ul>
-        <li><strong>Team Name:</strong> University of Virginia</li>
-        <li><strong>School Name:</strong> University of Virginia</li>
-        <li><strong>Faculty Advisor:</strong> Jack Davidson</li>
-    </ul>
+		<li><strong>Team Name:</strong> University of Virginia</li>
+		<li><strong>School Name:</strong> University of Virginia</li>
+		<li><strong>Faculty Advisor:</strong> Jack Davidson</li>
+	</ul>
 </div>
 <div>
 	<h2 class="typography">Team Members</h2>
@@ -29,7 +29,8 @@
 				<Card.Title>Michael Kent</Card.Title>
 			</Card.Header>
 			<Card.Content class="grow">
-				Computer Science major, with a minor in Sociology. While it is not a common combination, I believe understanding technology shouldn't stop at the technical.
+				Computer Science major, with a minor in Sociology. While it is not a common combination, I
+				believe understanding technology shouldn't stop at the technical.
 			</Card.Content>
 		</Card.Root>
 		<Card.Root class="basis-xs">
@@ -48,17 +49,29 @@
 				Computer Science student interested in cybersecurity.
 			</Card.Content>
 		</Card.Root>
-        <Card.Root class="basis-xs">
+		<Card.Root class="basis-xs">
 			<Card.Header>
 				<Card.Title>Sladjana Suzic</Card.Title>
 			</Card.Header>
 			<Card.Content class="grow">
-				Hi, I am a 2nd-year CS major in the E-school, with an interest in ethical social engineering, combining cybersecurity with my interest in human behavior. Looking forward to working together!
+				Hi, I am a 2nd-year CS major in the E-school, with an interest in ethical social
+				engineering, combining cybersecurity with my interest in human behavior. Looking forward to
+				working together!
 			</Card.Content>
 		</Card.Root>
 	</div>
 </div>
 <div class="mt-8">
 	<h2 class="typography">Video</h2>
-	<iframe class="mt-8 mx-auto" width="560" height="315" src="https://www.youtube.com/embed/uzoguORdaig?si=jdGpVDna6zGppvaO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+	<iframe
+		class="mx-auto mt-8"
+		width="560"
+		height="315"
+		src="https://www.youtube.com/embed/uzoguORdaig?si=jdGpVDna6zGppvaO"
+		title="YouTube video player"
+		frameborder="0"
+		allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+		referrerpolicy="strict-origin-when-cross-origin"
+		allowfullscreen
+	></iframe>
 </div>
