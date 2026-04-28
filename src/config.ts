@@ -1,60 +1,60 @@
 const config = {
 	officers: [
 		{
-			first_name: 'Shreyas',
-			last_name: 'Mayya',
+			first_name: 'Michael',
+			last_name: 'Kent',
 			role: 'President',
-			computing_id: 'eav6vg',
-			img: '/officers/25-26/shreyas.jpg'
+			computing_id: 'cgd9th',
+			img: '/officers/26-27/michael.jpg'
 		},
 		{
-			first_name: 'Vincent',
-			last_name: 'Zhang',
+			first_name: 'Bogdan',
+			last_name: 'Antonenko',
 			role: 'Infrastructure Chair',
-			computing_id: 'usp4pg',
-			img: '/officers/25-26/vincent.jpg'
+			computing_id: 'nrk9vk',
+			img: '/officers/26-27/bogdan.jpg'
 		},
 		{
-			first_name: 'Iuri',
-			last_name: 'Vintonyak',
+			first_name: 'James',
+			last_name: 'Greene',
 			role: 'Cyber Offense Chair',
-			computing_id: 'eav6vg',
-			img: '/officers/25-26/iuri.jpg'
+			computing_id: 'fqt9vv',
+			img: '/officers/26-27/james.jpg'
 		},
 		{
-			first_name: 'Benjamin',
-			last_name: 'Wolcott',
+			first_name: 'Brian',
+			last_name: 'Ryu',
 			role: 'Cyber Defense Chair',
-			computing_id: 'yhs3xc',
-			img: '/officers/25-26/ben.jpg'
+			computing_id: 'kfg2ec',
+			img: '/officers/26-27/brian.jpg'
+		},
+		{
+			first_name: 'Akanksha',
+			last_name: 'Gomatam',
+			role: 'Secretary',
+			computing_id: 'xgb9sx',
+			img: '/officers/26-27/akanksha.jpg'
+		},
+		{
+			first_name: 'Peter',
+			last_name: 'Nenyuk',
+			role: 'Treasurer',
+			computing_id: 'std5mp',
+			img: '/officers/26-27/peter.jpg'
 		},
 		{
 			first_name: 'Arjun',
 			last_name: 'Rao',
-			role: 'Secretary',
-			computing_id: 'rtt5gt',
-			img: '/officers/25-26/arjun.jpg'
-		},
-		{
-			first_name: 'Nikhil',
-			last_name: 'Boyalla',
-			role: 'Treasurer',
-			computing_id: 'jvk8cr',
-			img: '/officers/25-26/nikhil.jpg'
-		},
-		{
-			first_name: 'Austin',
-			last_name: 'Song',
 			role: 'Publicist',
-			computing_id: 'rtx2nb',
-			img: '/officers/25-26/austin-song.jpg'
+			computing_id: 'rtt5gt',
+			img: '/officers/26-27/arjun.jpg'
 		},
 		{
-			first_name: 'Austin',
-			last_name: 'Trinh',
+			first_name: 'Cameron',
+			last_name: 'Spears',
 			role: 'Meetings Chair',
-			computing_id: 'mxz8mm',
-			img: '/officers/25-26/austin-trinh.jpg'
+			computing_id: 'etq4vk',
+			img: '/officers/26-27/cameron.jpg'
 		}
 	],
 	title: 'Computer and Network Security Club @ UVA',
