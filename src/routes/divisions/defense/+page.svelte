@@ -32,7 +32,7 @@
 		</ul>
 		<p>
 			In the 2026 season, UVA placed second at the National Collegiate Cyber Defense Competition,
-			which was held virtually from April 24-26, 2025.
+			which was held virtually from April 24-26, 2026.
 		</p>
 		<p>
 			In addition to CCDC, the Cyber Defense Division sends teams to various blue-team competitions
