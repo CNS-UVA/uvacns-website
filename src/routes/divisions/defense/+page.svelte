@@ -26,13 +26,13 @@
 		</p>
 		<ul>
 			<li><strong>Three</strong> national championships (2018-20)</li>
-			<li><strong>Four</strong> national top-three placements (2018-20, 2025)</li>
+			<li><strong>Five</strong> national top-three placements (2018-20, 2025-2026)</li>
 			<li><strong>Eight</strong> national top-ten placements (2018-20, 2022-26)</li>
 			<li><strong>Six</strong> Mid-Atlantic championships (2018-19, 2023-26)</li>
 		</ul>
 		<p>
-			In the 2025 season, UVA placed second at the National Collegiate Cyber Defense Competition,
-			which was held virtually from April 25-27, 2025.
+			In the 2026 season, UVA placed second at the National Collegiate Cyber Defense Competition,
+			which was held virtually from April 24-26, 2025.
 		</p>
 		<p>
 			In addition to CCDC, the Cyber Defense Division sends teams to various blue-team competitions
@@ -43,6 +43,13 @@
 		<h2>In the News</h2>
 		<p>Read about the Cyber Defense Division here:</p>
 		<ul>
+			<li>
+				<a
+					href="https://engineering.virginia.edu/news-events/news/uva-cyber-defense-team-outperforms-claude-and-collegiate-rivals-earn-no-2-national-ranking"
+					>UVA Cyber Defense Team Outperforms Claude and Collegiate Rivals to Earn No. 2 National
+					Ranking</a
+				> (April 29, 2026)
+			</li>
 			<li>
 				<a
 					href="https://engineering.virginia.edu/news-events/news/uva-extends-win-streak-four-mid-atlantic-collegiate-cyber-defense-competition"
