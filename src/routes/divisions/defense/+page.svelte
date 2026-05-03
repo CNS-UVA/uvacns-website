@@ -48,7 +48,7 @@
 					href="https://engineering.virginia.edu/news-events/news/uva-cyber-defense-team-outperforms-claude-and-collegiate-rivals-earn-no-2-national-ranking"
 					>UVA Cyber Defense Team Outperforms Claude and Collegiate Rivals to Earn No. 2 National
 					Ranking</a
-				> (April 29, 2026)
+				> (April 30, 2026)
 			</li>
 			<li>
 				<a
